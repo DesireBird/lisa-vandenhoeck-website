@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep-Dives — Lisa Vandenhoeck</title>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/components/Button.css">
+  <link rel="stylesheet" href="styles/components/Card.css">
+  <link rel="stylesheet" href="styles/components/SelectionControl.css">
+  <link rel="stylesheet" href="styles/components/Chip.css">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────── -->
+<header class="site-nav">
+  <div class="container">
+    <a href="index.html" class="site-nav__logo">Lisa Vandenhoeck</a>
+    <button type="button" class="site-nav__toggle" id="navToggle" aria-expanded="false" aria-controls="siteNavList" aria-label="Menü öffnen">
+      <svg class="site-nav__toggle-icon site-nav__toggle-icon--open" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="site-nav__toggle-icon site-nav__toggle-icon--close" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav aria-label="Hauptnavigation">
+      <ul class="site-nav__list" id="siteNavList">
+        <li class="site-nav__item site-nav__item--dropdown">
+          <button type="button" class="site-nav__link site-nav__dropdown-toggle" id="servicesToggle" aria-expanded="false" aria-controls="servicesMenu">
+            Services
+            <svg class="site-nav__dropdown-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <ul class="site-nav__dropdown" id="servicesMenu">
+            <li><a href="figma-config.html" class="site-nav__dropdown-link">Figma Config: Was wirklich zählt</a></li>
+          </ul>
+        </li>
+        <li><a href="ressourcen.html" class="site-nav__link">Ressourcen</a></li>
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Baustelle ──────────────────────────────────────────── -->
+<section class="section section--paper">
+  <div class="container narrative" style="text-align: center; margin-top: var(--space-layout-lg); margin-bottom: var(--space-layout-lg);">
+    <span class="flag flag--neutral">Deep-Dives</span>
+    <h1 class="narrative__heading" style="margin-top: var(--space-gap-md);">Diese Seite ist noch im Aufbau</h1>
+    <div class="narrative__body">
+      <p>Was Gutes braucht Zeit. Eine Standard-Seite wollte ich hier nicht vorsetzen – deshalb baue ich noch ein bisschen länger.</p>
+    </div>
+    <a href="index.html" class="btn btn--secondary" style="margin-top: var(--space-layout-sm);">Zurück zur Startseite</a>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <span class="site-footer__name">Lisa Vandenhoeck</span>
+    <nav aria-label="Footer Navigation">
+      <ul class="site-footer__list">
+        <li><a href="impressum.html" class="site-footer__link">Impressum</a></li>
+        <li><a href="datenschutz.html" class="site-footer__link">Datenschutz</a></li>
+      </ul>
+    </nav>
+    <p class="site-footer__copy">© 2025 Lisa Vandenhoeck</p>
+  </div>
+</footer>
+
+<script src="scripts/site.js"></script>
+
+</body>
+</html>

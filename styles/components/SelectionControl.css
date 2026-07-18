@@ -1,0 +1,161 @@
+/* ============================================================
+   Selection Controls – Checkbox + Radio
+   Icon links, Label rechts. Label: text-style-body-m.
+   Konsumiert ausschließlich Semantic-Tokens aus dist/tokens.css
+   ============================================================ */
+
+/* ── Gemeinsame Wrapper-Basis ─────────────────────────────── */
+.checkbox,
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-sm);
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .checkbox,
+  .radio {
+    gap: var(--space-gap-md);
+  }
+}
+
+.checkbox--disabled,
+.radio--disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+/* Natives Input: visuell versteckt, bleibt im A11y-Tree ──── */
+.checkbox__input,
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* ── Label-Text ───────────────────────────────────────────── */
+.checkbox__label,
+.radio__label {
+  font: var(--text-style-body-m);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-default);
+}
+
+/* ── Checkbox Box ─────────────────────────────────────────── */
+.checkbox__box {
+  flex-shrink: 0;
+  width: var(--size-check);
+  height: var(--size-check);
+  border: 1.5px solid var(--color-border-default);
+  border-radius: var(--radius-control-sm);
+  background-color: var(--color-surface-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.checkbox__icon {
+  width: 11px;
+  height: 11px;
+  color: var(--color-text-inverse);
+  opacity: 0;
+  transition: opacity 100ms ease;
+  flex-shrink: 0;
+}
+
+/* Checked */
+.checkbox__input:checked + .checkbox__box {
+  background-color: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+}
+
+.checkbox__input:checked + .checkbox__box .checkbox__icon {
+  opacity: 1;
+}
+
+/* Hover */
+.checkbox:hover .checkbox__box {
+  border-color: var(--color-action-primary);
+}
+
+/* Focus */
+.checkbox__input:focus-visible + .checkbox__box {
+  border-color: var(--color-border-focus);
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Indeterminate */
+.checkbox__input:indeterminate + .checkbox__box {
+  background-color: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+}
+
+.checkbox__input:indeterminate + .checkbox__box .checkbox__icon {
+  opacity: 0; /* Minus-Icon wird via JS/extra-Klasse gehandelt */
+}
+
+/* ── Radio Kreis ──────────────────────────────────────────── */
+.radio__dot {
+  flex-shrink: 0;
+  width: var(--size-check);
+  height: var(--size-check);
+  border: 1.5px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 120ms ease;
+}
+
+.radio__dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-action-primary);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+/* Selected */
+.radio__input:checked + .radio__dot {
+  border-color: var(--color-action-primary);
+}
+
+.radio__input:checked + .radio__dot::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover */
+.radio:hover .radio__dot {
+  border-color: var(--color-action-primary);
+}
+
+/* Focus */
+.radio__input:focus-visible + .radio__dot {
+  border-color: var(--color-border-focus);
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Gruppe (vertikale Liste) ─────────────────────────────── */
+.selection-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-lg);
+}
+
+.selection-group__label {
+  font: var(--text-style-label);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-muted);
+}

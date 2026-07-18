@@ -1,0 +1,115 @@
+/* ============================================================
+   Button – Primary · Secondary · Tertiary
+   Konsumiert ausschließlich Semantic-Tokens aus dist/tokens.css
+   ============================================================ */
+
+/* ── Base ─────────────────────────────────────────────────── */
+.btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  /* Feste Höhe regiert vertikal; inset zentriert nur */
+  height: var(--size-control-md);
+  padding: var(--space-inset-sm) var(--space-inset-md);
+
+  border-radius: var(--radius-control-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* text-style.label = font-size/line-height font-family */
+  font: var(--text-style-label);
+  font-weight: var(--weight-bold);
+
+  transition: background-color 120ms ease,
+              color 120ms ease,
+              border-color 120ms ease,
+              opacity 120ms ease;
+}
+
+/* ── Focus ────────────────────────────────────────────────── */
+.btn:focus-visible:not(:active) {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Disabled ─────────────────────────────────────────────── */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+/* ── Primary (Coral) ──────────────────────────────────────── */
+.btn--primary {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:hover:not(:disabled):not([aria-disabled="true"]),
+.btn--primary.is-hover {
+  background-color: var(--color-action-primary-hover);
+}
+
+.btn--primary:active:not(:disabled):not([aria-disabled="true"]),
+.btn--primary.is-active {
+  background-color: var(--color-action-primary-active);
+}
+
+/* ── Secondary (Sky-Outline) ──────────────────────────────── */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text-accent2);
+  border: 1px solid var(--color-border-accent2);
+}
+
+.btn--secondary:hover:not(:disabled):not([aria-disabled="true"]),
+.btn--secondary.is-hover {
+  background-color: var(--color-fill-accent2-subtle);
+}
+
+.btn--secondary:active:not(:disabled):not([aria-disabled="true"]),
+.btn--secondary.is-active {
+  background-color: var(--color-fill-accent2-subtle);
+  border-color: var(--color-border-accent2);
+}
+
+/* ── Text-Size Modifiere ──────────────────────────────────────
+   Kombinierbar mit jeder Farb-Variante, z. B. .btn.btn--primary.btn--body-l.
+   font: ist eine Shorthand und setzt font-weight sonst auf normal zurück,
+   daher hier explizit erneut auf bold (Default für Primary/Secondary). */
+.btn--body-m {
+  font: var(--text-style-body-m);
+  font-weight: var(--weight-bold);
+}
+
+.btn--body-l {
+  font: var(--text-style-body-l);
+  font-weight: var(--weight-bold);
+}
+
+.btn--tertiary.btn--body-m,
+.btn--tertiary.btn--body-l {
+  font-weight: var(--weight-regular);
+}
+
+/* ── Tertiary (Ghost) ─────────────────────────────────────── */
+.btn--tertiary {
+  background-color: transparent;
+  color: var(--color-text-accent2);
+  font-weight: var(--weight-regular);
+}
+
+.btn--tertiary:hover:not(:disabled):not([aria-disabled="true"]),
+.btn--tertiary.is-hover {
+  background-color: var(--color-fill-neutral-subtle);
+}
+
+.btn--tertiary:active:not(:disabled):not([aria-disabled="true"]),
+.btn--tertiary.is-active {
+  background-color: var(--color-fill-neutral-subtle);
+}

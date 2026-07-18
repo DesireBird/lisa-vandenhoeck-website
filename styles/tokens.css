@@ -1,0 +1,161 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-neutral-light-0: #ffffff; /** Light-Neutral (kühl, crisp). Weiss. */
+  --color-neutral-light-50: #f8fafc; /** Light-Neutral. */
+  --color-neutral-light-100: #f4f6f8; /** Light-Neutral (Paper). */
+  --color-neutral-light-200: #e4e8ed; /** Light-Neutral (Border-Light). */
+  --color-neutral-light-300: #d2d8e0; /** Light-Neutral. */
+  --color-neutral-light-400: #b4bcc8; /** Light-Neutral (muted Icon/Border, nicht Text). */
+  --color-neutral-light-500: #94a0b0; /** Light-Neutral (hellster Slate). */
+  --color-neutral-dark-400: #7c8696; /** Dark-Neutral (Muted-Text auf Dark). */
+  --color-neutral-dark-500: #5b6473; /** Dark-Neutral (Slate / Muted). */
+  --color-neutral-dark-600: #38414f; /** Dark-Neutral. */
+  --color-neutral-dark-700: #262c38; /** Dark-Neutral (Raised / Border-Dark). */
+  --color-neutral-dark-800: #1a1e25; /** Dark-Neutral (Surface-Dark). */
+  --color-neutral-dark-900: #14171c; /** Dark-Neutral (Ink / Page-BG-Dark). */
+  --color-neutral-dark-950: #0e1014; /** Dark-Neutral (dunkelste Stufe). */
+  --color-accent1-50: #fdeee8; /** Accent 1 = Coral (warm, Hero/Buttons). */
+  --color-accent1-100: #fbd9cc; /** Coral-Ramp. */
+  --color-accent1-200: #f8bba3; /** Coral-Ramp. */
+  --color-accent1-300: #f59a75; /** Coral-Ramp. */
+  --color-accent1-400: #f2754a; /** Coral-Ramp (bright). */
+  --color-accent1-500: #e85c2e; /** Coral-Ramp (Basis/Seed). */
+  --color-accent1-600: #d2461e; /** Coral-Ramp (UI/Text-Light). Primary. */
+  --color-accent1-700: #ae3917; /** Coral-Ramp (Text auf hell, dunkel genug). */
+  --color-accent1-800: #8a2e13; /** Coral-Ramp. */
+  --color-accent1-900: #6b2410; /** Coral-Ramp. */
+  --color-accent2-50: #eaf1fe; /** Accent 2 = Sky (kühl, Links/KI-Layer/Support). */
+  --color-accent2-100: #d2e2fd; /** Sky-Ramp. */
+  --color-accent2-200: #a9c6fb; /** Sky-Ramp. */
+  --color-accent2-300: #7fa8f9; /** Sky-Ramp. */
+  --color-accent2-400: #5b8bff; /** Sky-Ramp (bright/Dark). */
+  --color-accent2-500: #3b6ff2; /** Sky-Ramp. */
+  --color-accent2-600: #2563eb; /** Sky-Ramp (Primär-Link). */
+  --color-accent2-700: #1d4ed8; /** Sky-Ramp (Text auf hell). */
+  --color-accent2-800: #1a3da8; /** Sky-Ramp. */
+  --color-accent2-900: #172e78; /** Sky-Ramp. */
+  --color-red-100: #fde8e8; /** PLATZHALTER Danger-Ramp (Fläche). */
+  --color-red-300: #f5a9a9; /** PLATZHALTER Danger-Ramp (Border). */
+  --color-red-600: #d12d2d; /** PLATZHALTER Danger-Ramp (Text auf neutral). */
+  --color-red-800: #7d1515; /** PLATZHALTER Danger-Ramp (Text auf Danger-Fläche). */
+  --color-amber-100: #fdf3d7; /** PLATZHALTER Warning-Ramp (Fläche). */
+  --color-amber-300: #f0d27a; /** PLATZHALTER Warning-Ramp (Border). */
+  --color-amber-600: #8a6300; /** PLATZHALTER Warning-Ramp (Text, dunkler Bernstein). */
+  --color-amber-800: #5c4200; /** PLATZHALTER Warning-Ramp (Text auf Fläche). */
+  --color-green-100: #e2f5e7; /** PLATZHALTER Success-Ramp (Fläche). */
+  --color-green-300: #9fd9af; /** PLATZHALTER Success-Ramp (Border). */
+  --color-green-600: #1f7a3d; /** PLATZHALTER Success-Ramp (Text auf neutral). */
+  --color-green-800: #0f4521; /** PLATZHALTER Success-Ramp (Text auf Fläche). */
+  --color-fill-neutral-subtle: rgba(0, 0, 0, 0.04); /** Neutraler State-Layer, HALBTRANSPARENT (keine Ramp-Ref). DARK MODE: rgba(255,255,255,0.06). */
+  --space-1: 6px; /** Roh-Leiter. */
+  --space-2: 8px; /** Roh-Leiter. */
+  --space-3: 12px; /** Roh-Leiter. */
+  --space-4: 16px; /** Roh-Leiter. */
+  --space-5: 24px; /** Roh-Leiter. */
+  --space-6: 32px; /** Roh-Leiter. */
+  --space-7: 48px; /** Roh-Leiter. */
+  --space-8: 64px; /** Roh-Leiter. */
+  --space-9: 96px; /** Roh-Leiter. */
+  --radius-control-sm: 2px; /** Checkbox, kleine Chips. */
+  --radius-control-md: 4px; /** Button, Input, Segmented. */
+  --radius-control-lg: 8px; /** Grosse Controls. */
+  --radius-surface: 12px; /** Cards, Panels, Dialoge. */
+  --radius-surface-lg: 48px; /** Große dekorative Flächen (z. B. Hero-/Section-Ecken). Stärker gerundet als Card, aber kein Pill/Full. */
+  --radius-full: 999px; /** Radio, Toggle, Avatare. */
+  --size-control-sm: 32px; /** Control-Höhe klein. VORSCHLAG. */
+  --size-control-md: 40px; /** Gemeinsame Control-Höhe. VORSCHLAG. */
+  --size-control-lg: 48px; /** Control-Höhe gross. VORSCHLAG. */
+  --size-icon-sm: 16px; /** Icon neben Body-Text (body.s/label). */
+  --size-icon-md: 20px; /** Icon neben Body-Text (body.m). */
+  --size-icon-lg: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */
+  --size-avatar-sm: 36px; /** Avatar klein (Inline, List-Item). */
+  --size-avatar-md: 48px; /** Avatar mittel (Standard). */
+  --size-avatar-lg: 64px; /** Avatar gross (Profil-Header). */
+  --size-indicator: 2px; /** Dicke des aktiven Tab-Indikators (Unterstrich). */
+  --size-check: 18px; /** Seitenlänge Checkbox / Durchmesser Radio. Beim Bau festgelegt. */
+  --size-toggle-h: 20px; /** Toggle-Track-Höhe. Beim Bau festgelegt. */
+  --size-toggle-w: 36px; /** Toggle-Track-Breite. Beim Bau festgelegt. */
+  --font-size-100: 11px; /** Typo-Roh-Leiter. */
+  --font-size-200: 14px; /** Typo-Roh-Leiter. */
+  --font-size-300: 16px; /** Typo-Roh-Leiter. */
+  --font-size-400: 18px; /** Typo-Roh-Leiter. */
+  --font-size-500: 24px; /** Typo-Roh-Leiter. */
+  --font-size-600: 32px; /** Typo-Roh-Leiter. */
+  --weight-regular: 400; /** Gewicht-Achse (frei kombinierbar). */
+  --weight-medium: 500; /** Gewicht-Achse. */
+  --weight-bold: 700; /** Gewicht-Achse. */
+  --font-family-heading: Unbounded, sans-serif; /** Display/Heading-Familie. */
+  --font-family-body: 'Plus Jakarta Sans', system-ui, sans-serif; /** Lauftext-Familie. */
+  --font-family-caption: 'JetBrains Mono', ui-monospace, monospace; /** Caption-Familie (Mono). Für Subline/Meta, nicht für lange Fliesstext-Blöcke. */
+  --width-prose: 65ch; /** Lesebreite. */
+  --width-content: 1024px; /** Inhaltsbereich. */
+  --width-page: 1280px; /** Seitenbegrenzung. */
+  --width-sidebar: 96px; /** Schmale Sidebar-Leiste (Icon oben, Label darunter, quadratische Items). */
+  --width-sidebar-drawer: 224px; /** Overlay-Drawer der Sidebar (Level 2 + Level 3). */
+  --opacity-disabled: 0.5; /** Opacity für deaktivierte interaktive Elemente. */
+  --offset-icon-text: 2px; /** Optischer Versatz: Icon top-align mit der ersten Textzeile (line-height-Ausgleich). */
+  --elevation-sm: 0px 0px 4px 0px #00000018; /** Gleichmäßiger Halo (Licht von oben). Dark Mode: Schatten tragen schlecht. */
+  --elevation-md: 0px 4px 8px 0px #00000026; /** PLATZHALTER. */
+  --elevation-lg: 0px 8px 24px 0px #0000002e; /** PLATZHALTER. */
+  --color-text-default: var(--color-neutral-dark-900); /** Standard-Textfarbe / Ink. Hell-Modus. */
+  --color-text-muted: var(--color-neutral-dark-500); /** Gedämpfter Text (Slate). Hell-Modus. */
+  --color-text-inverse: var(--color-neutral-light-0); /** Text auf gekippter Fläche (weiss). */
+  --color-text-accent1: var(--color-accent1-700); /** Coral als Text auf hell (selten; Coral ist v. a. Fill). >=4.5:1. */
+  --color-text-accent2: var(--color-accent2-600); /** Sky als Text auf hell = Links/KI-Layer. >=4.5:1 (600 = Primär-Link). */
+  --color-action-primary: var(--color-accent1-600); /** Primary-Fill = Coral. ACHTUNG Kontrast: weisser Text auf Coral 500/600 liegt nahe 3:1 -> für Text-4.5:1 ggf. dunklere Stufe oder grosse/fette Labels. */
+  --color-action-primary-hover: var(--color-accent1-500); /** Hover. */
+  --color-action-primary-active: var(--color-accent1-700); /** Active. */
+  --color-border-default: var(--color-neutral-light-200); /** Standard-Rahmen (Hairline). Hell-Modus. */
+  --color-border-strong: var(--color-neutral-light-300); /** Stärkerer Rahmen. */
+  --color-border-focus: var(--color-accent2-600); /** Fokus-Ring (Sky). */
+  --color-border-accent1: var(--color-accent1-500); /** Coral-Border (behalten, evtl. andere Zwecke). */
+  --color-border-accent2: var(--color-accent2-600); /** Sky-Border (Secondary-Control, KI-NATIV). */
+  --color-fill-accent1-solid: var(--color-accent1-500); /** Vollton Coral (Vorrat; Aussehen-Pendant zu action.primary). */
+  --color-fill-accent1-subtle: var(--color-accent1-50); /** Blass getöntes Coral. */
+  --color-fill-accent2-solid: var(--color-accent2-600); /** Vollton Sky (Vorrat). */
+  --color-fill-accent2-subtle: var(--color-accent2-50); /** Blass getöntes Sky (KI-Layer-Fläche). */
+  --color-bg-default: var(--color-neutral-light-100); /** Seite (Paper). Hell-Modus. Dark: neutral.dark.900 (Ink). */
+  --color-bg-variant: var(--color-neutral-light-50); /** Background-Variante. Hell-Modus. */
+  --color-surface-default: var(--color-neutral-light-0); /** Card/Panel (weiss, elevated). Hell-Modus. Dark: neutral.dark.800. */
+  --color-surface-variant: var(--color-neutral-light-50); /** Surface-Variante. Hell-Modus. */
+  --color-danger-text: var(--color-red-600); /** Danger-Text auf neutralem Grund. */
+  --color-danger-surface: var(--color-red-100); /** Danger-Fläche (blasse Box). */
+  --color-danger-on-surface: var(--color-red-800); /** Text auf der Danger-Fläche. */
+  --color-danger-border: var(--color-red-300); /** Rand der Danger-Fläche. */
+  --color-warning-text: var(--color-amber-600); /** Warning-Text auf neutralem Grund. */
+  --color-warning-surface: var(--color-amber-100); /** Warning-Fläche. */
+  --color-warning-on-surface: var(--color-amber-800); /** Text auf Warning-Fläche. */
+  --color-warning-border: var(--color-amber-300); /** Rand der Warning-Fläche. */
+  --color-success-text: var(--color-green-600); /** Success-Text auf neutralem Grund. */
+  --color-success-surface: var(--color-green-100); /** Success-Fläche. */
+  --color-success-on-surface: var(--color-green-800); /** Text auf Success-Fläche. */
+  --color-success-border: var(--color-green-300); /** Rand der Success-Fläche. */
+  --space-inset-sm: var(--space-2); /** Innenabstand klein. Vorläufig. */
+  --space-inset-md: var(--space-4); /** Innenabstand mittel. Vorläufig. */
+  --space-inset-lg: var(--space-5); /** Innenabstand gross. Vorläufig. */
+  --space-inset-xl: var(--space-7); /** Innenabstand extra-gross, z. B. große dekorative Karten (48px). */
+  --space-gap-sm: var(--space-1); /** Geschwister klein. Vorläufig. */
+  --space-gap-md: var(--space-3); /** Geschwister mittel. Vorläufig. */
+  --space-gap-lg: var(--space-4); /** Geschwister gross. Vorläufig. */
+  --space-layout-sm: var(--space-6); /** Sektion klein. Vorläufig. */
+  --space-layout-md: var(--space-7); /** Sektion mittel. Vorläufig. */
+  --space-layout-lg: var(--space-9); /** Sektion gross. Vorläufig. */
+  --space-layout-gutter: var(--space-5); /** Horizontaler Seitenrand (links/rechts), z. B. Header-Padding. */
+  --text-style-heroshot: clamp(var(--font-size-500), 3.2vw, 48px)/1.1 var(--font-family-heading); /** Nur für die H1 im Hero. Fluid zwischen fontSize.500 (24px) und 48px über die Viewport-Breite. Gewicht separat. */
+  --text-style-headline-s: var(--font-size-400)/1.3 var(--font-family-heading); /** Rolle. Heading-Familie. Vorläufig. */
+  --text-style-headline-m: var(--font-size-500)/1.3 var(--font-family-heading); /** Rolle. Heading-Familie. Vorläufig. */
+  --text-style-headline-l: var(--font-size-600)/1.3 var(--font-family-heading); /** Rolle. Heading-Familie. Vorläufig. */
+  --text-style-title-s: var(--font-size-200)/1.4 var(--font-family-heading); /** Heading-Familie. Grösse 14 (beschlossen). line-height PLATZHALTER. */
+  --text-style-title-m: var(--font-size-300)/1.4 var(--font-family-heading); /** Heading-Familie. Grösse 16 (beschlossen). */
+  --text-style-title-l: var(--font-size-400)/1.4 var(--font-family-heading); /** Heading-Familie. Grösse 18 (beschlossen). */
+  --text-style-body-s: var(--font-size-200)/1.5 var(--font-family-body); /** Body-Familie. PLATZHALTER line-height. */
+  --text-style-body-m: var(--font-size-300)/1.5 var(--font-family-body); /** Body-Familie. PLATZHALTER line-height. */
+  --text-style-body-l: var(--font-size-400)/1.5 var(--font-family-body); /** Body-Familie. PLATZHALTER line-height. */
+  --text-style-body-xl: var(--font-size-500)/1.5 var(--font-family-body); /** Body-Familie, 24px – matcht headline-m in der Größe für hervorgehobene Body-Textblöcke ohne Wechsel zur Heading-Familie. */
+  --text-style-label: var(--font-size-100)/1.3 var(--font-family-body); /** Body-Familie. line-height PLATZHALTER. */
+  --text-style-caption-subline: var(--font-size-400)/1.3 var(--font-family-caption); /** Caption (Mono). Subline/Deck unter grossen Überschriften. 18px, eng. */
+  --text-style-caption-meta: var(--font-size-200)/1.4 var(--font-family-caption); /** Caption (Mono). Meta/Zeitstempel/Bildunterschrift. 14px, etwas luftiger. */
+}

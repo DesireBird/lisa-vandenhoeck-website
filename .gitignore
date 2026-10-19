@@ -1,1 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+.netlify/
+.sanity/
+
+# Env / Secrets – nie committen
+.env
+.env.*
+!.env.example
+
+# OS / Editor
 .DS_Store
+*.log
+.vscode/
+.idea/
+
+
+# iCloud-Konfliktkopien (z. B. „page 2.tsx“), Projekt liegt in iCloud Drive
+* [0-9].*
+* [0-9]

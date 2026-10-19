@@ -1,24 +1,29 @@
-# Netlify-Site „vandenhoeck.de“. Phase 1: die bestehende statische Seite 1:1, ohne Build.
-# Später (Phase 3) kommt wie bei Paw Holidays base = "web" mit Next.js-Export dazu.
-# Bis zum Domain-Umzug deployt parallel weiterhin die GitHub Action per FTP zu All-Inkl.
+# Netlify-Site „vandenhoeck.de“ (Aufbau wie Paw Holidays). Liegt im Repo-Root, damit in der
+# Netlify-Oberfläche kein Base directory gesetzt werden muss. Pfade unter [build] sind relativ zu base.
+# Live-Site: Umgebungsvariable SITE_ENV=production setzen. Ohne sie (Staging, Previews) → noindex.
+# Production branch = live, main = Staging (Branch-Deploy, kostet keine Credits).
 [build]
-  publish = "."
-  command = ""
+  base = "web"
+  command = "npm run build"
+  publish = "out"
+  # Build überspringen nur, wenn sich nichts geändert hat, was in die Seite einfließt.
+  # Standard bei Monorepos prüft nur web/ – Tokens und Components (brand/) gehören aber dazu.
+  # Builds über einen Build-Hook (später Sanity) laufen immer.
+  ignore = "[ -z \"$INCOMING_HOOK_TITLE\" ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../brand ../netlify.toml"
 
-# Bilder, Fonts, CSS und JS haben keinen Hash im Namen: einen Tag cachen, dann neu prüfen.
+[build.environment]
+  NODE_VERSION = "22"
+
+# Dateien unter /_next/static/ und Fonts haben feste Inhalte: ein Jahr im Browser cachen.
+# HTML bleibt bei Netlifys Standard (immer frisch prüfen).
 [[headers]]
-  for = "/fonts/*"
+  for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[[headers]]
-  for = "/resources/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
-
-# Sicherheits-Header für alle Seiten (gleiche Basis wie Paw Holidays).
-# CSP: eine Seite hat ein Inline-Skript, einige Elemente Inline-Styles → 'unsafe-inline'.
-# Calendly ist nur verlinkt, nicht eingebettet. frame-src app.netlify.com: Toolbar in Deploy Previews.
+# Sicherheits-Header für alle Seiten.
+# CSP: Next.js-Export braucht Inline-Skripte/-Styles ('unsafe-inline'). Calendly ist nur verlinkt.
+# frame-src app.netlify.com: Netlify-Toolbar in Deploy Previews.
 [[headers]]
   for = "/*"
   [headers.values]
@@ -27,10 +32,3 @@
     X-Frame-Options = "DENY"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://app.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
-
-# Interne Dateien nicht ausliefern.
-[[redirects]]
-  from = "/.github/*"
-  to = "/404"
-  status = 404
-  force = true

@@ -170,14 +170,14 @@
   --color-text-accent1: var(--color-accent1-700); /** Coral als Text auf hell (selten; Coral ist v. a. Fill). >=4.5:1. */
   --color-text-accent2: var(--color-accent2-600); /** Sky als Text auf hell = Links/KI-Layer. >=4.5:1 (600 = Primär-Link). */
   --color-action-primary: var(--color-accent1-600); /** Primary-Fill = Coral 600. Button-Label muss fett und gross sein (≥ 3:1); für normalen Text Stufe 700 verwenden (≥ 4.5:1). */
-  --color-action-primary-hover: var(--color-accent1-500); /** Hover. */
-  --color-action-primary-active: var(--color-accent1-700); /** Active. */
+  --color-action-primary-hover: var(--color-accent1-700); /** Vandenhoeck: Hover dunkler statt heller, damit weißes Label >= 4.5:1 bleibt (500 hätte nur 3.5:1). */
+  --color-action-primary-active: var(--color-accent1-800); /** Vandenhoeck: eine Stufe unter Hover, damit Active unterscheidbar bleibt. */
   --color-border-default: var(--color-neutral-light-200); /** Standard-Rahmen (Hairline). Hell-Modus. */
   --color-border-strong: var(--color-neutral-light-300); /** Stärkerer Rahmen. */
   --color-border-focus: var(--color-accent2-600); /** Fokus-Ring (Sky). */
-  --color-border-accent1: var(--color-accent1-500); /** Coral-Border (z. B. dekorative Akzentlinie). */
+  --color-border-accent1: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-border-accent2: var(--color-accent2-600); /** Sky-Border (Secondary-Control, KI-NATIV). */
-  --color-fill-accent1-solid: var(--color-accent1-500); /** Vollton Coral (Vorrat; Aussehen-Pendant zu action.primary). */
+  --color-fill-accent1-solid: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-fill-accent1-subtle: var(--color-accent1-50); /** Blass getöntes Coral. */
   --color-fill-accent2-solid: var(--color-accent2-600); /** Vollton Sky (Vorrat). */
   --color-fill-accent2-subtle: var(--color-accent2-50); /** Blass getöntes Sky (KI-Layer-Fläche). */

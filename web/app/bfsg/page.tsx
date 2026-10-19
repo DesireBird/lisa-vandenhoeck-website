@@ -73,7 +73,7 @@ export default function BfsgPage() {
                 />
                 <path
                   d="M14 5A9 9 0 0 1 14 23"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                 />
                 <path
@@ -110,13 +110,13 @@ export default function BfsgPage() {
                 />
                 <path
                   d="M18 11L22 20"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />
                 <path
                   d="M17 20L23 20"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />
@@ -160,13 +160,13 @@ export default function BfsgPage() {
                 />
                 <path
                   d="M21 8C23 9.5 23 15.5 21 17"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />
                 <path
                   d="M23.5 6C26.5 8.5 26.5 16.5 23.5 19"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />

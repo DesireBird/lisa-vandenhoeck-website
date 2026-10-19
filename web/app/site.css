@@ -194,7 +194,7 @@ img {
 }
 
 .ticker__sep {
-  color: var(--color-accent1-500);
+  color: var(--color-fill-accent1-solid);
   font-weight: var(--weight-bold);
   flex-shrink: 0;
 }

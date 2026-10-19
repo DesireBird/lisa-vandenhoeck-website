@@ -78,9 +78,9 @@ export default function KiReadyPage() {
                   r="1.2"
                   style={{ fill: "var(--color-neutral-dark-400)" }}
                 />
-                <circle cx="17.5" cy="10.5" r="1.2" style={{ fill: "var(--color-accent1-500)" }} />
+                <circle cx="17.5" cy="10.5" r="1.2" style={{ fill: "var(--color-fill-accent1-solid)" }} />
                 <circle cx="14" cy="14" r="1.2" style={{ fill: "var(--color-neutral-dark-400)" }} />
-                <circle cx="10.5" cy="17.5" r="1.2" style={{ fill: "var(--color-accent1-500)" }} />
+                <circle cx="10.5" cy="17.5" r="1.2" style={{ fill: "var(--color-fill-accent1-solid)" }} />
                 <circle
                   cx="17.5"
                   cy="17.5"
@@ -175,7 +175,7 @@ export default function KiReadyPage() {
                 />
                 <path
                   d="M11.5 20H15"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />

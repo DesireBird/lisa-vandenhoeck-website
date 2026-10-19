@@ -45,11 +45,10 @@ export default function DatenschutzPage() {
               <code>localStorage</code> oder <code>sessionStorage</code> statt.
             </p>
             <p>
-              Die auf dieser Website verwendeten Schriftarten (Unbounded, Plus Jakarta Sans,
-              JetBrains Mono) sind lokal in die Website eingebunden (Self-Hosting). Es findet keine
-              Verbindung zu Servern von Google oder anderen Drittanbietern zum Nachladen von
-              Schriftarten statt, sodass hierbei keine Daten wie z. B. Ihre IP-Adresse an Dritte
-              übertragen werden.
+              Die auf dieser Website verwendeten Schriftarten (Unbounded, Plus Jakarta Sans) sind
+              lokal in die Website eingebunden (Self-Hosting). Es findet keine Verbindung zu Servern
+              von Google oder anderen Drittanbietern zum Nachladen von Schriftarten statt, sodass
+              hierbei keine Daten wie z. B. Ihre IP-Adresse an Dritte übertragen werden.
             </p>
             <p>
               <strong>3. Hosting über Netlify</strong>

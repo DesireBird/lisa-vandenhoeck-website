@@ -4,8 +4,8 @@ Brand-Overrides auf das AgentSchmiede Design System (`brand/design-system`, Subm
 Token-Namen bleiben die des Core, Components laufen also unverändert.
 
 ```
-tokens.json     # Quelle: nur Vandenhoeck-Overrides (DTCG)
-fonts.css       # @font-face Unbounded, Plus Jakarta Sans, JetBrains Mono, self-hosted (wird in branding.css eingebettet)
+tokens.json     # Quelle: Vandenhoeck-Overrides (DTCG), derzeit leer = reiner Core
+fonts.css       # @font-face Unbounded, Plus Jakarta Sans, self-hosted (wird in branding.css eingebettet)
 build.mjs       # Core + tokens.json → branding.css
 branding.css    # generiert – nicht von Hand editieren
 assets/fonts/   # woff2, latin + latin-ext
@@ -20,6 +20,4 @@ Einbinden: `branding.css` laden (in Next.js über `web/app/brand.css`). Die Toke
 
 ## Overrides gegenüber dem Core
 
-| Token | Wert | Grund |
-| --- | --- | --- |
-| `font.family.caption` | JetBrains Mono | Captions/Labels wie auf der bisherigen Seite |
+Keine. Die Seite nutzt die Core-Tokens unverändert (Captions in der Body-Familie Plus Jakarta Sans).

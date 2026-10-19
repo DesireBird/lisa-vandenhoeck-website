@@ -74,7 +74,7 @@ export default function HomePage() {
                   x="24"
                   y="38"
                   fill="#e85c2e"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   letterSpacing="2.5"
                   fontWeight="400"
@@ -90,7 +90,7 @@ export default function HomePage() {
                   x="24"
                   y="74"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >
@@ -104,7 +104,7 @@ export default function HomePage() {
                   x="24"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   accent1
@@ -117,7 +117,7 @@ export default function HomePage() {
                   x="130"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   accent2
@@ -139,7 +139,7 @@ export default function HomePage() {
                   x="236"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   neutral
@@ -154,7 +154,7 @@ export default function HomePage() {
                   x="24"
                   y="160"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   spacing
@@ -196,7 +196,7 @@ export default function HomePage() {
                   x="140"
                   y="162"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   typography
@@ -218,7 +218,7 @@ export default function HomePage() {
                   x="24"
                   y="224"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >
@@ -323,7 +323,7 @@ export default function HomePage() {
                   x="24"
                   y="358"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >

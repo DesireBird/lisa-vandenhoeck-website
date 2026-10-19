@@ -3,28 +3,10 @@
  */
 
 /* ============================================================
-   Selbstgehostete Google Fonts (Unbounded, Plus Jakarta Sans,
-   JetBrains Mono) — latin + latin-ext, lokal statt von Google
+   Selbstgehostete Google Fonts (Unbounded, Plus Jakarta Sans)
+   — latin + latin-ext, lokal statt von Google
    Servern geladen. Vermeidet externe Requests/IP-Übertragung.
    ============================================================ */
-
-/* ── JetBrains Mono ───────────────────────────────────────── */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/jetbrains-mono-400-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/jetbrains-mono-400-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 /* ── Plus Jakarta Sans ────────────────────────────────────── */
 @font-face {
@@ -172,7 +154,6 @@
   --letter-spacing-caps: 0.08em; /** Tracking für Versalien-Text (Eyebrows, Section-Labels mit text-transform: uppercase). */
   --font-family-heading: Unbounded, sans-serif; /** Display/Heading-Familie. */
   --font-family-body: 'Plus Jakarta Sans', system-ui, sans-serif; /** Lauftext-Familie. */
-  --font-family-caption: 'JetBrains Mono', ui-monospace, monospace; /** Vandenhoeck: Captions in JetBrains Mono statt Body-Familie (wie auf der bisherigen Seite). */
   --width-prose: 65ch; /** Lesebreite. */
   --width-content: 1024px; /** Inhaltsbereich. */
   --width-page: 1280px; /** Seitenbegrenzung. */
@@ -189,14 +170,14 @@
   --color-text-accent1: var(--color-accent1-700); /** Coral als Text auf hell (selten; Coral ist v. a. Fill). >=4.5:1. */
   --color-text-accent2: var(--color-accent2-600); /** Sky als Text auf hell = Links/KI-Layer. >=4.5:1 (600 = Primär-Link). */
   --color-action-primary: var(--color-accent1-600); /** Primary-Fill = Coral 600. Button-Label muss fett und gross sein (≥ 3:1); für normalen Text Stufe 700 verwenden (≥ 4.5:1). */
-  --color-action-primary-hover: var(--color-accent1-500); /** Hover. */
-  --color-action-primary-active: var(--color-accent1-700); /** Active. */
+  --color-action-primary-hover: var(--color-accent1-700); /** Vandenhoeck: Hover dunkler statt heller, damit weißes Label >= 4.5:1 bleibt (500 hätte nur 3.5:1). */
+  --color-action-primary-active: var(--color-accent1-800); /** Vandenhoeck: eine Stufe unter Hover, damit Active unterscheidbar bleibt. */
   --color-border-default: var(--color-neutral-light-200); /** Standard-Rahmen (Hairline). Hell-Modus. */
   --color-border-strong: var(--color-neutral-light-300); /** Stärkerer Rahmen. */
   --color-border-focus: var(--color-accent2-600); /** Fokus-Ring (Sky). */
-  --color-border-accent1: var(--color-accent1-500); /** Coral-Border (z. B. dekorative Akzentlinie). */
+  --color-border-accent1: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-border-accent2: var(--color-accent2-600); /** Sky-Border (Secondary-Control, KI-NATIV). */
-  --color-fill-accent1-solid: var(--color-accent1-500); /** Vollton Coral (Vorrat; Aussehen-Pendant zu action.primary). */
+  --color-fill-accent1-solid: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-fill-accent1-subtle: var(--color-accent1-50); /** Blass getöntes Coral. */
   --color-fill-accent2-solid: var(--color-accent2-600); /** Vollton Sky (Vorrat). */
   --color-fill-accent2-subtle: var(--color-accent2-50); /** Blass getöntes Sky (KI-Layer-Fläche). */
@@ -230,6 +211,7 @@
   --space-layout-md: var(--space-7); /** Sektionsabstand mittel. */
   --space-layout-lg: var(--space-9); /** Sektionsabstand gross. */
   --space-layout-gutter: var(--space-5); /** Horizontaler Seitenrand (links/rechts), z. B. Header-Padding. */
+  --font-family-caption: var(--font-family-body); /** Caption-Familie = Body-Familie (Plus Jakarta Sans). Eigener Token bleibt, damit Caption unabhängig drehbar ist. Abgrenzung zu body über line-height, Farbe (text.muted) und ggf. Versalien + Letter-Spacing. */
   --text-style-heroshot: clamp(var(--font-size-500), 3.2vw, 48px)/1.1 var(--font-family-heading); /** Nur für die H1 im Hero. Fluid zwischen fontSize.500 (24px) und 48px über die Viewport-Breite. Gewicht separat. */
   --text-style-headline-s: var(--font-size-400)/1.3 var(--font-family-heading); /** Headline klein. Heading-Familie, 18px. */
   --text-style-headline-m: var(--font-size-500)/1.3 var(--font-family-heading); /** Headline mittel. Heading-Familie, 24px. */
@@ -242,9 +224,9 @@
   --text-style-body-l: var(--font-size-400)/1.5 var(--font-family-body); /** Body gross. Body-Familie, 18px. */
   --text-style-body-xl: var(--font-size-500)/1.5 var(--font-family-body); /** Body-Familie, 24px – matcht headline-m in der Größe für hervorgehobene Body-Textblöcke ohne Wechsel zur Heading-Familie. */
   --text-style-label: var(--font-size-100)/1.3 var(--font-family-body); /** Label. Body-Familie, 11px. */
-  --text-style-caption-subline: var(--font-size-400)/1.3 var(--font-family-caption); /** Caption (Body-Familie). Subline/Deck unter grossen Überschriften. 18px, eng. */
-  --text-style-caption-meta: var(--font-size-200)/1.4 var(--font-family-caption); /** Caption (Body-Familie). Meta/Zeitstempel/Bildunterschrift. 14px, line-height 1.4. */
   --color-text-accent1-on-variant: var(--color-text-accent1); /** accent1 als Text auf bg.variant. Standard = text.accent1; eine Brand setzt eine dunklere Stufe, wenn ihr bg.variant getönt ist und sonst 4.5:1 nicht reicht. */
   --color-text-accent2-on-variant: var(--color-text-accent2); /** accent2 (Links) auf bg.variant. Standard = text.accent2; bei getöntem bg.variant dunklere Stufe setzen (>=4.5:1). */
   --color-border-on-variant: var(--color-border-default); /** Trennlinie auf bg.variant. Standard = border.default; bei getöntem bg.variant einen passenden Ton setzen, sonst wirkt die Linie fremd. */
+  --text-style-caption-subline: var(--font-size-400)/1.3 var(--font-family-caption); /** Caption (Body-Familie). Subline/Deck unter grossen Überschriften. 18px, eng. */
+  --text-style-caption-meta: var(--font-size-200)/1.4 var(--font-family-caption); /** Caption (Body-Familie). Meta/Zeitstempel/Bildunterschrift. 14px, line-height 1.4. */
 }

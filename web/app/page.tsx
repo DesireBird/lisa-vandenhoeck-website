@@ -73,16 +73,16 @@ export default function HomePage() {
                 <text
                   x="24"
                   y="38"
-                  fill="#e85c2e"
-                  fontFamily="JetBrains Mono, monospace"
+                  fill="#d2461e"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="10"
                   letterSpacing="2.5"
                   fontWeight="400"
                 >
                   DESIGN SYSTEM
                 </text>
-                <circle cx="344" cy="32" r="5" fill="#e85c2e" opacity="0.9" />
-                <circle cx="344" cy="32" r="9" fill="#e85c2e" opacity="0.2" />
+                <circle cx="344" cy="32" r="5" fill="#d2461e" opacity="0.9" />
+                <circle cx="344" cy="32" r="9" fill="#d2461e" opacity="0.2" />
                 {/* Divider */}
                 <line x1="24" y1="52" x2="336" y2="52" stroke="#262c38" strokeWidth="1" />
                 {/* ── Layer: Tokens ────────────────────────────── */}
@@ -90,21 +90,21 @@ export default function HomePage() {
                   x="24"
                   y="74"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >
                   TOKENS
                 </text>
                 {/* Color swatches: accent1 */}
-                <rect x="24" y="84" width="22" height="22" rx="4" fill="#e85c2e" />
+                <rect x="24" y="84" width="22" height="22" rx="4" fill="#d2461e" />
                 <rect x="50" y="84" width="22" height="22" rx="4" fill="#f59a75" />
                 <rect x="76" y="84" width="22" height="22" rx="4" fill="#fbd9cc" />
                 <text
                   x="24"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   accent1
@@ -117,7 +117,7 @@ export default function HomePage() {
                   x="130"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   accent2
@@ -139,7 +139,7 @@ export default function HomePage() {
                   x="236"
                   y="120"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   neutral
@@ -154,7 +154,7 @@ export default function HomePage() {
                   x="24"
                   y="160"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   spacing
@@ -196,7 +196,7 @@ export default function HomePage() {
                   x="140"
                   y="162"
                   fill="#8899aa"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="8"
                 >
                   typography
@@ -218,14 +218,14 @@ export default function HomePage() {
                   x="24"
                   y="224"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >
                   COMPONENTS
                 </text>
                 {/* Button */}
-                <rect x="24" y="234" width="76" height="26" rx="4" fill="#e85c2e" />
+                <rect x="24" y="234" width="76" height="26" rx="4" fill="#d2461e" />
                 <text
                   x="62"
                   y="251"
@@ -295,7 +295,7 @@ export default function HomePage() {
                   Eingabefeld...
                 </text>
                 {/* Checkbox */}
-                <rect x="262" y="272" width="14" height="14" rx="2" fill="#e85c2e" />
+                <rect x="262" y="272" width="14" height="14" rx="2" fill="#d2461e" />
                 <path
                   d="M265 279L268 282L273 276"
                   stroke="white"
@@ -323,7 +323,7 @@ export default function HomePage() {
                   x="24"
                   y="358"
                   fill="#94a0b0"
-                  fontFamily="JetBrains Mono, monospace"
+                  fontFamily="Plus Jakarta Sans, sans-serif"
                   fontSize="9"
                   letterSpacing="1.5"
                 >
@@ -331,7 +331,7 @@ export default function HomePage() {
                 </text>
                 {/* Wireframe preview: nav bar */}
                 <rect x="24" y="368" width="312" height="18" rx="2" fill="#262c38" />
-                <rect x="30" y="372" width="60" height="8" rx="1" fill="#e85c2e" opacity="0.6" />
+                <rect x="30" y="372" width="60" height="8" rx="1" fill="#d2461e" opacity="0.6" />
                 <rect x="216" y="372" width="30" height="8" rx="1" fill="#38414f" />
                 <rect x="252" y="372" width="30" height="8" rx="1" fill="#38414f" />
                 <rect x="290" y="372" width="30" height="8" rx="1" fill="#38414f" />

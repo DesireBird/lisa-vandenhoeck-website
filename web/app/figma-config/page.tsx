@@ -104,7 +104,7 @@ export default function FigmaConfigPage() {
                   y1="23"
                   x2="24"
                   y2="4"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />
@@ -179,7 +179,7 @@ export default function FigmaConfigPage() {
                 />
                 <path
                   d="M14 16V11"
-                  style={{ stroke: "var(--color-accent1-500)" }}
+                  style={{ stroke: "var(--color-border-accent1)" }}
                   strokeWidth="1.5"
                   strokeLinecap="round"
                 />

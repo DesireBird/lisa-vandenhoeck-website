@@ -1,0 +1,12 @@
+{
+  "name": "@agentschmiede/brand-vandenhoeck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0"
+  }
+}

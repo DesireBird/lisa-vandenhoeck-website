@@ -1,0 +1,11 @@
+# Alte URLs der statischen Seite (bis Oktober 2026) → neue Pfade. Immer direkt aufs Ziel, keine Ketten.
+# „!“ erzwingt die Regel, obwohl out/index.html existiert (sonst liefert Netlify die Datei aus).
+/index.html          /                301!
+/about.html          /about/          301
+/bfsg.html           /bfsg/           301
+/datenschutz.html    /datenschutz/    301
+/figma-config.html   /figma-config/   301
+/impressum.html      /impressum/      301
+/ki-ready.html       /ki-ready/       301
+/ressourcen.html     /ressourcen/     301
+/services.html       /services/       301

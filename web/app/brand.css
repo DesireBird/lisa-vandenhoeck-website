@@ -1,0 +1,11 @@
+/*
+ * Einstieg ins Branding: Vandenhoeck-Tokens (+ @font-face) und die Core-Components
+ * aus dem Design System. Pfade zeigen auf brand/ im Monorepo.
+ * Tokens ändern → brand/themes/vandenhoeck/tokens.json, dort `npm run build`.
+ */
+@import "../../brand/themes/vandenhoeck/branding.css";
+
+@import "../../brand/design-system/src/components/Button.css";
+@import "../../brand/design-system/src/components/Card.css";
+@import "../../brand/design-system/src/components/SelectionControl.css";
+@import "../../brand/design-system/src/components/Chip.css";

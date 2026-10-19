@@ -1,0 +1,3 @@
+[submodule "brand/design-system"]
+	path = brand/design-system
+	url = git@github.com:AgentSchmiede/designSystem.git

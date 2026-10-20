@@ -37,11 +37,13 @@
   margin-bottom: var(--space-layout-s);
 }
 
+/* Zurück-Link (Breadcrumb): grau, näher am Seitenanfang als die Überschrift */
 .ds-back {
   display: inline-block;
+  margin-top: calc((var(--space-layout-l) - var(--space-layout-s)) * -1);
   margin-bottom: var(--space-gap-l);
   font: var(--text-style-label);
-  color: var(--color-text-accent2);
+  color: var(--color-text-muted);
   text-decoration: none;
 }
 

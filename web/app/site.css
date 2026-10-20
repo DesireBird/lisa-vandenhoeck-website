@@ -25,6 +25,14 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* Links im Fließtext immer unterstrichen (nicht nur Farbe) */
+p a:not(.button),
+td a,
+.rich-text a:not(.button):not(.chip):not(.card--link),
+.ds-example__links a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 ul {
   list-style: none;
 }

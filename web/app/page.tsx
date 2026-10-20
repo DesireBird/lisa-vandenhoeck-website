@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HomeEffects } from "@/components/HomeEffects";
+import { getSettings } from "@/lib/settings";
 
-export const metadata: Metadata = {
-  title: { absolute: "Lisa Vandenhoeck — Designsystem-Klarheit" },
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { seoTitle } = await getSettings();
+  return {
+    title: { absolute: seoTitle },
+    alternates: { canonical: "/" },
+  };
+}
 
-export default function HomePage() {
+export default async function HomePage() {
+  const settings = await getSettings();
   return (
     <>
       {/* ── Ticker ─────────────────────────────────────────────── */}
@@ -42,15 +47,10 @@ export default function HomePage() {
       <section className="hero" id="hero">
         <div className="container hero__inner">
           <div className="hero__content">
-            <h1 className="hero__headline">
-              Die Anforderungen an euer Design System verändern sich schneller, als ihr mitkommt?
-            </h1>
-            <p className="hero__sub">
-              Ich mache eine Sache: Designsystem-Klarheit. Ein Deep-Dive, an eurem eigenen System.
-              Damit euer System wieder die Tools beherrscht und nicht umgekehrt.
-            </p>
+            <h1 className="hero__headline">{settings.heroHeadline}</h1>
+            <p className="hero__sub">{settings.heroSub}</p>
             <a
-              href="https://calendly.com/lisa-vandenhoeck/30min"
+              href={settings.bookingUrl}
               className="btn btn--primary btn--lg btn--body-l"
               target="_blank"
               rel="noopener noreferrer"
@@ -413,7 +413,7 @@ export default function HomePage() {
                       Prozess durch einen Deepdive-Booster beschleunigen.
                     </p>
                     <a
-                      href="https://calendly.com/lisa-vandenhoeck/30min"
+                      href={settings.bookingUrl}
                       className="btn scroll-card__cta btn--body-l"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -983,7 +983,7 @@ export default function HomePage() {
                   0/6 Wähle die Punkte aus, die auf euch zutreffen
                 </p>
                 <a
-                  href="https://calendly.com/lisa-vandenhoeck/30min"
+                  href={settings.bookingUrl}
                   className="btn btn--primary check-cta"
                   id="checkCta"
                   target="_blank"
@@ -1031,7 +1031,7 @@ export default function HomePage() {
               </div>
               <div className="service-card__actions">
                 <a
-                  href="https://calendly.com/lisa-vandenhoeck/30min"
+                  href={settings.bookingUrl}
                   className="btn btn--primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1089,7 +1089,7 @@ export default function HomePage() {
               </div>
               <div className="service-card__actions">
                 <a
-                  href="https://calendly.com/lisa-vandenhoeck/30min"
+                  href={settings.bookingUrl}
                   className="btn btn--primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1143,7 +1143,7 @@ export default function HomePage() {
               </div>
               <div className="service-card__actions">
                 <a
-                  href="https://calendly.com/lisa-vandenhoeck/30min"
+                  href={settings.bookingUrl}
                   className="btn btn--primary"
                   target="_blank"
                   rel="noopener noreferrer"

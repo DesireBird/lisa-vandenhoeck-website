@@ -133,7 +133,7 @@
   --size-button-l: 56px; /** Button-Höhe L – Ausnahme: prominenter Button allein in einer Section (Landingpage). */
   --size-listbox-max: 300px; /** Maximale Höhe der Listbox einer Combobox, danach scrollt sie (Select: bis 7 Optionen). */
   --size-field-min: 200px; /** Mindestbreite von Form Field, Select und Combobox. In schmalen Containern höchstens 100 %. */
-  --size-field-max: 480px; /** Maximale Breite von Form Field, Select und Combobox (Desktop). Darunter füllen sie den Container. */
+  --size-field-max: 768px; /** Maximale Breite von Form Field, Select und Combobox (Desktop). Darunter füllen sie den Container. */
   --size-icon-s: 16px; /** Icon neben Body-Text (body.s/label). */
   --size-icon-m: 20px; /** Icon neben Body-Text (body.m). */
   --size-icon-l: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */

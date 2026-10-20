@@ -1,0 +1,346 @@
+/* Design-System-Bereich (/ressourcen/design-system/). Nur Tokens, keine Einzelwerte. */
+
+/* ── Sidebar aus dem Design System (Sidebar.css) unter dem sticky Website-Header ──
+   Sidebar.css geht von einer Seite ohne Kopfzeile aus (top: 0, 100vh). Hier beginnen
+   Leiste, Drawer und mobile Topbar unter .site-nav; --ds-header-offset setzt DsSidebar. */
+.ds-shell .sidebar,
+.ds-shell .sidebar__drawer {
+  top: var(--ds-header-offset, 0px);
+  height: calc(100vh - var(--ds-header-offset, 0px));
+}
+
+.ds-shell .sidebar-topbar {
+  top: var(--ds-header-offset, 0px);
+}
+
+.ds-shell .app-body {
+  min-height: calc(100vh - var(--ds-header-offset, 0px));
+}
+
+/* Inhalt in Lesebreite (width.reading, 900px) zentriert neben der Sidebar; die Sidebar
+   bleibt am linken Rand. */
+.ds-shell .app-content .container {
+  max-width: var(--width-reading);
+}
+
+/* Inhalt darf nicht scrollen/clippen (Dropdown-Listen in den Demos ragen über) */
+.ds-shell .app-content {
+  overflow: visible;
+}
+
+/* ── Allgemein ── */
+.ds-heading {
+  margin-top: var(--space-gap-m);
+}
+
+.ds-intro {
+  margin-bottom: var(--space-layout-s);
+}
+
+/* Zurück-Link (Breadcrumb): grau, näher am Seitenanfang als die Überschrift */
+.ds-back {
+  display: inline-block;
+  margin-top: calc((var(--space-layout-l) - var(--space-layout-s)) * -1);
+  margin-bottom: var(--space-gap-l);
+  font: var(--text-style-label);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.ds-back:hover {
+  text-decoration: underline;
+}
+
+.ds-card__meta {
+  font: var(--text-style-caption-meta);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.ds-note {
+  padding: var(--space-inset-m);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-surface-m);
+  font: var(--text-style-body-m);
+  color: var(--color-text-muted);
+}
+
+.ds-doc {
+  margin-top: var(--space-layout-s);
+}
+
+/* ── Tokens ── */
+.ds-token-group {
+  margin-top: var(--space-layout-s);
+}
+
+.ds-token-group__heading {
+  margin: 0 0 var(--space-gap-m);
+  font: var(--text-style-title-s);
+  font-weight: var(--weight-bold);
+}
+
+.ds-token-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-gap-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Token-Kachel = DS-Card (.card), nur nebeneinander statt untereinander */
+.ds-token {
+  flex-direction: row;
+}
+
+.ds-token__preview {
+  display: flex;
+  flex: 0 0 var(--space-layout-m);
+  align-items: center;
+  justify-content: center;
+  min-height: var(--space-layout-m);
+  overflow: hidden;
+}
+
+.ds-token__swatch,
+.ds-token__box {
+  display: block;
+  width: var(--space-layout-m);
+  height: var(--space-layout-m);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-control-m);
+}
+
+.ds-token__box {
+  background-color: var(--color-surface-default);
+}
+
+.ds-token__box--filled {
+  background-color: var(--color-fill-accent2-solid);
+}
+
+.ds-token__bar {
+  display: block;
+  max-width: 100%;
+  height: var(--space-gap-m);
+  border-radius: var(--radius-control-s);
+  background-color: var(--color-fill-accent2-subtle);
+  border: 1px solid var(--color-border-accent2);
+}
+
+.ds-token__specimen {
+  color: var(--color-text-default);
+  white-space: nowrap;
+}
+
+.ds-token__specimen--caps {
+  font: var(--text-style-caption-meta);
+  text-transform: uppercase;
+}
+
+.ds-token__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-s);
+  min-width: 0;
+}
+
+.ds-token__name {
+  font: var(--text-style-label);
+  font-weight: var(--weight-bold);
+  overflow-wrap: anywhere;
+}
+
+.ds-token__var,
+.ds-token__value {
+  font: var(--text-style-caption-meta);
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.ds-token__ref {
+  color: var(--color-text-accent2);
+}
+
+.ds-token__desc {
+  margin: 0;
+  font: var(--text-style-body-s);
+  color: var(--color-text-default);
+}
+
+/* Typografie-Muster brauchen mehr Platz als ein Farbfeld */
+.ds-token:has(.ds-token__specimen) {
+  flex-direction: column;
+}
+
+.ds-token:has(.ds-token__specimen) .ds-token__preview {
+  justify-content: flex-start;
+  flex-basis: auto;
+}
+
+/* ── Live-Beispiele (Hilfsklassen wie in brand/design-system/preview.html) ── */
+.ds-demo {
+  margin-top: var(--space-gap-l);
+  padding: var(--space-inset-l);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-surface-m);
+  background-color: var(--color-bg-default);
+  font: var(--text-style-body-m);
+  color: var(--color-text-default);
+  /* clip statt auto: kein Scroll-Container, Dropdown-Listen ragen nach unten über den Rahmen */
+  overflow-x: clip;
+}
+
+.ds-demo .section-label {
+  font: var(--text-style-caption-meta);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+  margin: 0 0 var(--space-gap-m) 0;
+}
+
+.ds-demo .row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-gap-l);
+  flex-wrap: wrap;
+}
+
+.ds-demo hr {
+  border: none;
+  border-top: 1px solid var(--color-border-default);
+  margin: var(--space-layout-s) 0;
+}
+
+.ds-demo .demo-banner .banner {
+  position: static;
+}
+
+.ds-demo .demo-divider {
+  position: relative;
+  /* Platz für die Silhouette über der Fläche (preview.html: 140px) */
+  margin-top: calc(var(--space-layout-l) + var(--space-layout-m));
+  padding: var(--space-inset-l);
+  background: var(--section-bg);
+  border-radius: 0 0 var(--radius-surface-m) var(--radius-surface-m);
+}
+
+/* ── Component-Doku aus dem DS-Repo (Markdown) ── */
+.ds-markdown h2 {
+  margin: var(--space-layout-s) 0 var(--space-gap-m);
+  font: var(--text-style-title-m);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-default);
+}
+
+.ds-markdown h3 {
+  margin: var(--space-gap-l) 0 var(--space-gap-s);
+  font: var(--text-style-title-s);
+  font-weight: var(--weight-bold);
+}
+
+.ds-markdown code {
+  padding: 0 var(--space-gap-s);
+  border-radius: var(--radius-control-s);
+  background-color: var(--color-fill-neutral-subtle);
+  font-size: 0.9em;
+}
+
+.ds-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-gap-m) 0;
+  font: var(--text-style-body-s);
+}
+
+.ds-markdown th,
+.ds-markdown td {
+  padding: var(--space-gap-s) var(--space-gap-m);
+  border-bottom: 1px solid var(--color-border-default);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ds-markdown th {
+  font-weight: var(--weight-bold);
+  color: var(--color-text-default);
+}
+
+.ds-markdown a {
+  color: var(--color-text-accent2);
+}
+
+/* GFM-Aufgabenlisten (Abschnitt „Offen“) */
+.ds-markdown li:has(> input[type="checkbox"]) {
+  list-style: none;
+}
+
+.ds-markdown li > input[type="checkbox"] {
+  margin-right: var(--space-gap-s);
+}
+
+/* „Spec“-Überschrift mit „Copy Spec as MD“ daneben */
+.ds-doc__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-gap-m);
+  margin-bottom: var(--space-gap-l);
+}
+
+.ds-doc__heading {
+  margin: 0;
+  font: var(--text-style-headline-m);
+  font-weight: var(--weight-bold);
+}
+
+.ds-doc__meta {
+  margin-top: var(--space-gap-l);
+  font: var(--text-style-caption-meta);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+}
+
+/* ── Eigene Beispiele aus Sanity ── */
+.ds-examples {
+  display: grid;
+  gap: var(--space-gap-l);
+}
+
+.ds-example {
+  margin: 0;
+}
+
+.ds-example__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-surface-m);
+}
+
+.ds-example__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ds-example__links a {
+  color: var(--color-text-accent2);
+}
+
+.ds-chip-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ds-chip-links .chip {
+  text-decoration: none;
+}

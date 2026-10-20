@@ -120,25 +120,30 @@
   --space-7: 48px; /** Roh-Leiter. */
   --space-8: 64px; /** Roh-Leiter. */
   --space-9: 96px; /** Roh-Leiter. */
-  --radius-control-sm: 2px; /** Checkbox, kleine Chips. */
-  --radius-control-md: 4px; /** Button, Input, Segmented. */
-  --radius-control-lg: 8px; /** Grosse Controls. */
-  --radius-surface: 12px; /** Cards, Panels, Dialoge. */
-  --radius-surface-lg: 48px; /** Große dekorative Flächen (z. B. Hero-/Section-Ecken). Stärker gerundet als Card, aber kein Pill/Full. */
+  --radius-control-s: 2px; /** Checkbox, kleine Chips. */
+  --radius-control-m: 4px; /** Button, Input, Segmented. */
+  --radius-control-l: 8px; /** Grosse Controls. */
+  --radius-surface-m: 12px; /** Cards, Panels, Dialoge. */
+  --radius-surface-l: 48px; /** Große dekorative Flächen (z. B. Hero-/Section-Ecken). Stärker gerundet als Card, aber kein Pill/Full. */
   --radius-full: 999px; /** Radio, Toggle, Avatare. */
-  --size-control-sm: 32px; /** Control-Höhe klein. */
-  --size-control-md: 40px; /** Control-Höhe mittel (Standard). */
-  --size-control-lg: 48px; /** Control-Höhe gross. */
-  --size-icon-sm: 16px; /** Icon neben Body-Text (body.s/label). */
-  --size-icon-md: 20px; /** Icon neben Body-Text (body.m). */
-  --size-icon-lg: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */
-  --size-avatar-sm: 36px; /** Avatar klein (Inline, List-Item). */
-  --size-avatar-md: 48px; /** Avatar mittel (Standard). */
-  --size-avatar-lg: 64px; /** Avatar gross (Profil-Header). */
+  --size-control-s: 32px; /** Control-Höhe klein. */
+  --size-control-m: 40px; /** Control-Höhe mittel (Standard). */
+  --size-control-l: 48px; /** Control-Höhe gross. */
+  --size-button-m: 48px; /** Button-Höhe M – hervorgehobene Buttons, z. B. Hero-CTA. */
+  --size-button-l: 56px; /** Button-Höhe L – Ausnahme: prominenter Button allein in einer Section (Landingpage). */
+  --size-listbox-max: 300px; /** Maximale Höhe der Listbox einer Combobox, danach scrollt sie (Select: bis 7 Optionen). */
+  --size-field-min: 200px; /** Mindestbreite von Form Field, Select und Combobox. In schmalen Containern höchstens 100 %. */
+  --size-field-max: 768px; /** Maximale Breite von Form Field, Select und Combobox (Desktop). Darunter füllen sie den Container. */
+  --size-icon-s: 16px; /** Icon neben Body-Text (body.s/label). */
+  --size-icon-m: 20px; /** Icon neben Body-Text (body.m). */
+  --size-icon-l: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */
+  --size-avatar-s: 36px; /** Avatar klein (Inline, List-Item). */
+  --size-avatar-m: 48px; /** Avatar mittel (Standard). */
+  --size-avatar-l: 64px; /** Avatar gross (Profil-Header). */
   --size-indicator: 2px; /** Dicke des aktiven Tab-Indikators (Unterstrich). */
   --size-check: 18px; /** Seitenlänge Checkbox / Durchmesser Radio. */
-  --size-toggle-h: 20px; /** Toggle-Track-Höhe. */
-  --size-toggle-w: 36px; /** Toggle-Track-Breite. */
+  --size-toggle-height: 20px; /** Toggle-Track-Höhe. */
+  --size-toggle-width: 36px; /** Toggle-Track-Breite. */
   --size-dot: 10px; /** Punkt-Indikator (Carousel-Pagination), sichtbare Größe. Trefferfläche: size.dot-target. */
   --size-dot-target: 24px; /** Mindest-Trefferfläche kleiner Steuerpunkte (WCAG 2.5.8 Target Size, 24×24 CSS-px). */
   --font-size-100: 11px; /** Typo-Roh-Leiter. */
@@ -159,21 +164,23 @@
   --width-page: 1280px; /** Seitenbegrenzung. */
   --width-sidebar: 96px; /** Schmale Sidebar-Leiste (Icon oben, Label darunter, quadratische Items). */
   --width-sidebar-drawer: 224px; /** Overlay-Drawer der Sidebar (Level 2 + Level 3). */
+  --width-reading: 900px; /** Lesebreite für Doku-Inhalte (Design-System-Bereich): angenehme Zeilenlänge neben der Sidebar. */
   --opacity-disabled: 0.5; /** Opacity für deaktivierte interaktive Elemente. */
   --offset-icon-text: 2px; /** Optischer Versatz: Icon top-align mit der ersten Textzeile (line-height-Ausgleich). */
-  --elevation-sm: 0px 0px 4px 0px #00000018; /** Gleichmäßiger Halo (Licht von oben). Dark Mode: Schatten tragen schlecht. */
-  --elevation-md: 0px 4px 8px 0px #00000026; /** Elevation mittel. Karten, Dropdowns. */
-  --elevation-lg: 0px 8px 24px 0px #0000002e; /** Elevation gross. Modals, Flyouts. */
+  --elevation-s: 0px 0px 4px 0px #00000018; /** Gleichmäßiger Halo (Licht von oben). Dark Mode: Schatten tragen schlecht. */
+  --elevation-m: 0px 4px 8px 0px #00000026; /** Elevation mittel. Karten, Listboxen. */
+  --elevation-l: 0px 8px 24px 0px #0000002e; /** Elevation gross. Modals, Flyouts. */
   --color-text-default: var(--color-neutral-dark-900); /** Standard-Textfarbe / Ink. Hell-Modus. */
   --color-text-muted: var(--color-neutral-dark-500); /** Gedämpfter Text (Slate). Hell-Modus. */
   --color-text-inverse: var(--color-neutral-light-0); /** Text auf gekippter Fläche (weiss). */
   --color-text-accent1: var(--color-accent1-700); /** Coral als Text auf hell (selten; Coral ist v. a. Fill). >=4.5:1. */
   --color-text-accent2: var(--color-accent2-600); /** Sky als Text auf hell = Links/KI-Layer. >=4.5:1 (600 = Primär-Link). */
-  --color-action-primary: var(--color-accent1-600); /** Primary-Fill = Coral 600. Button-Label muss fett und gross sein (≥ 3:1); für normalen Text Stufe 700 verwenden (≥ 4.5:1). */
+  --color-action-primary-none: var(--color-accent1-600); /** Primary-Fill = Coral 600. Button-Label muss fett und gross sein (≥ 3:1); für normalen Text Stufe 700 verwenden (≥ 4.5:1). */
   --color-action-primary-hover: var(--color-accent1-700); /** Vandenhoeck: Hover dunkler statt heller, damit weißes Label >= 4.5:1 bleibt (500 hätte nur 3.5:1). */
   --color-action-primary-active: var(--color-accent1-800); /** Vandenhoeck: eine Stufe unter Hover, damit Active unterscheidbar bleibt. */
   --color-border-default: var(--color-neutral-light-200); /** Standard-Rahmen (Hairline). Hell-Modus. */
   --color-border-strong: var(--color-neutral-light-300); /** Stärkerer Rahmen. */
+  --color-border-input: var(--color-neutral-dark-400); /** Rahmen von Eingabefeldern (Input, Select, Combobox). Mind. 3:1 auf allen hellen Flächen (bg.default, bg.variant, surface.*), WCAG 1.4.11. Nicht für Cards/Trennlinien – dort border.default. */
   --color-border-focus: var(--color-accent2-600); /** Fokus-Ring (Sky). */
   --color-border-accent1: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-border-accent2: var(--color-accent2-600); /** Sky-Border (Secondary-Control, KI-NATIV). */
@@ -194,23 +201,24 @@
   --color-warning-surface: var(--color-amber-100); /** Warning-Fläche. */
   --color-warning-on-surface: var(--color-amber-800); /** Text auf Warning-Fläche. */
   --color-warning-border: var(--color-amber-300); /** Rand der Warning-Fläche. */
-  --color-success-text: var(--color-green-600); /** Success-Text auf neutralem Grund. */
-  --color-success-surface: var(--color-green-100); /** Success-Fläche. */
-  --color-success-on-surface: var(--color-green-800); /** Text auf Success-Fläche. */
-  --color-success-border: var(--color-green-300); /** Rand der Success-Fläche. */
-  --space-inset-sm: var(--space-2); /** Innenabstand klein. */
-  --space-inset-md: var(--space-4); /** Innenabstand mittel. */
-  --space-inset-lg: var(--space-5); /** Innenabstand gross. */
+  --color-positive-text: var(--color-green-600); /** Success-Text auf neutralem Grund. */
+  --color-positive-surface: var(--color-green-100); /** Success-Fläche. */
+  --color-positive-on-surface: var(--color-green-800); /** Text auf Success-Fläche. */
+  --color-positive-border: var(--color-green-300); /** Rand der Success-Fläche. */
+  --space-inset-s: var(--space-2); /** Innenabstand klein. */
+  --space-inset-m: var(--space-4); /** Innenabstand mittel. */
+  --space-inset-l: var(--space-5); /** Innenabstand gross. */
   --space-inset-xl: var(--space-7); /** Innenabstand extra-gross, z. B. große dekorative Karten (48px). */
-  --space-inset-2xl: var(--space-8); /** Innenabstand doppelt-extra-gross (64px), eine Leiterstufe über inset.xl. Z. B. großzügige Hero-Flächen. */
-  --space-gap-sm: var(--space-1); /** Geschwisterabstand klein. */
-  --space-gap-md: var(--space-3); /** Geschwisterabstand mittel. */
-  --space-gap-lg: var(--space-4); /** Geschwisterabstand gross. */
+  --space-inset-xxl: var(--space-8); /** Innenabstand doppelt-extra-gross (64px), eine Leiterstufe über inset.xl. Z. B. großzügige Hero-Flächen. */
+  --space-gap-s: var(--space-1); /** Geschwisterabstand klein. */
+  --space-gap-m: var(--space-3); /** Geschwisterabstand mittel. */
+  --space-gap-l: var(--space-4); /** Geschwisterabstand gross. */
   --space-gap-xl: var(--space-5); /** Geschwisterabstand extra-gross (24px), eine Leiterstufe über gap.lg. Z. B. Punkte einer Hauptnavigation, Spalten eines Bildrasters. */
-  --space-layout-sm: var(--space-6); /** Sektionsabstand klein. */
-  --space-layout-md: var(--space-7); /** Sektionsabstand mittel. */
-  --space-layout-lg: var(--space-9); /** Sektionsabstand gross. */
+  --space-layout-s: var(--space-6); /** Sektionsabstand klein. */
+  --space-layout-m: var(--space-7); /** Sektionsabstand mittel. */
+  --space-layout-l: var(--space-9); /** Sektionsabstand gross. */
   --space-layout-gutter: var(--space-5); /** Horizontaler Seitenrand (links/rechts), z. B. Header-Padding. */
+  --size-button-s: var(--size-control-m); /** Button-Höhe S = Standard. Immer gleich hoch wie alle Controls (size.control.m), damit beides in einer Reihe kombinierbar ist. */
   --font-family-caption: var(--font-family-body); /** Caption-Familie = Body-Familie (Plus Jakarta Sans). Eigener Token bleibt, damit Caption unabhängig drehbar ist. Abgrenzung zu body über line-height, Farbe (text.muted) und ggf. Versalien + Letter-Spacing. */
   --text-style-heroshot: clamp(var(--font-size-500), 3.2vw, 48px)/1.1 var(--font-family-heading); /** Nur für die H1 im Hero. Fluid zwischen fontSize.500 (24px) und 48px über die Viewport-Breite. Gewicht separat. */
   --text-style-headline-s: var(--font-size-400)/1.3 var(--font-family-heading); /** Headline klein. Heading-Familie, 18px. */

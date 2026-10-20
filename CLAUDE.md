@@ -4,17 +4,18 @@ Website von Lisa Vandenhoeck (Vandenhoeck Deepdives). Aufbau wie Paw Holidays (`
 
 ## Stack
 - Next.js 16 (App Router, TypeScript) in `web/`, statischer Export (`output: 'export'`, `trailingSlash: true`). Vor Code in `web/` die Doku in `web/node_modules/next/dist/docs/` lesen (siehe `web/AGENTS.md`).
-- Sanity als CMS in `studio/` (Sanity v6), Projekt `4y4m7dt1` (Organisation Agentschmiede, nicht das Paw-Projekt), öffentliches Dataset `production`, Studio: https://vandenhoeck.sanity.studio. Der Sanity-Webhook „Netlify Build live“ (reagiert auf siteSettings, deepdive, resource, page; ohne Entwürfe) ruft beim Veröffentlichen den Netlify-Build-Hook „sanity“ für `live` auf. Neue Dokumenttypen dort im Filter ergänzen (sanity.io/manage → API → Webhooks)
+- Sanity als CMS in `studio/` (Sanity v6), Projekt `o18b50z8` (Organisation Desire Bird GmbH, nicht das Paw-Projekt), öffentliches Dataset `production`, Studio: https://vandenhoeck.sanity.studio. Veröffentlichen in Sanity baut nur Staging: Der Sanity-Webhook „Netlify Build Staging“ (siteSettings, deepdive, resource, page, designSystem, dsComponent, dsPattern; ohne Entwürfe) ruft den Netlify-Build-Hook „sanity-staging“ für `main` auf (kostenlos). Live geht Inhalt erst per Netlify „Trigger deploy“ (Production, kostet Credits) oder mit dem nächsten Release `main` → `live`. Neue Dokumenttypen im Webhook-Filter ergänzen (sanity.io/manage → API → Webhooks)
 - Netlify für Hosting (`netlify.toml` im Root, base `web`). **Production branch = `live`**, `main` = Staging als Branch-Deploy. Code nach `live` nur per PR `main` → `live`
 - Repo: DesireBird/lisa-vandenhoeck-website. GitHub nur mit Account DesireBird.
 - Design System als Submodule `brand/design-system` (AgentSchmiede/designSystem, privat, nicht anfassen), Theme in `brand/themes/vandenhoeck/`
-- Netlify: Branch deploys = `main`, Deploy Previews für PRs gegen `live`/`main`. „Trigger deploy“ im Netlify-UI baut nur `live`
+- Netlify: Branch deploys = `main`, Deploy Previews für PRs gegen `live`/`main`. „Trigger deploy“ im Netlify-UI baut nur `live`. Die Ignore-Regel gilt nur für Production; Staging und Previews bauen immer
 - Domain und Mail bei All-Inkl (Nameserver + MX bleiben dort)
 
 ## Routen
 - `/`, `/about/`, `/ressourcen/`, `/services/`, `/impressum/`, `/datenschutz/`, 404 (im Code)
 - Deepdives (`deepdive`: `/figma-config/`, `/ki-ready/`, `/bfsg/`) und freie Seiten (`page`) flach unter `/<slug>/` über `web/app/[slug]/page.tsx`. Slugs dürfen nicht kollidieren; Pfade im Code sind in `studio/schemaTypes/lib/slug.ts` reserviert
-- Ressourcen (`resource`): Liste `/ressourcen/` und Detail `/ressourcen/<slug>/` in `web/app/ressourcen/[[...slug]]/page.tsx` (ohne Einträge: Baustellen-Hinweis)
+- Ressourcen (`resource`): Liste `/ressourcen/` (Karte „Design System“ immer vorne) und Detail `/ressourcen/<slug>/` in `web/app/ressourcen/[[...slug]]/page.tsx`
+- Design System unter `/ressourcen/design-system/` (`web/app/ressourcen/design-system/`): Foundation je Kategorie (`/foundation/<kategorie>/`) und Components (`/components/<id>/`) werden beim Build aus `brand/design-system/tokens.json` (+ Theme-Overrides) und `brand/design-system/preview.html` erzeugt (`web/lib/designSystem.ts`); Texte und Patterns (`/patterns/<slug>/`) aus Sanity (`designSystem`, `dsPattern`). Component-Doku: technischer Text als Markdown aus dem DS-Repo (`docs/components/*.md`, per GitHub Action schreibgeschützt nach Sanity `dsComponent.docsMarkdown`), dazu in Sanity Kurzbeschreibung, Hinweise und eigene Beispiele (Bild/Live-HTML mit Links). Neue Component im DS → in `studio/schemaTypes/lib/dsComponents.ts` ergänzen. Zusätzliche Component-CSS lädt nur `web/app/ressourcen/design-system/layout.tsx`; Navigation dort mit der Sidebar-Component aus dem DS (`web/components/DsSidebar.tsx`, Verhalten aus preview.html portiert)
 - Alte URLs (`/about.html` usw.) leiten über `web/public/_redirects` weiter
 
 ## Regeln

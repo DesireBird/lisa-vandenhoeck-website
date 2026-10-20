@@ -5,13 +5,13 @@ import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 
 // Seiteneinstellungen gibt es genau einmal: nicht neu anlegen, nicht löschen oder duplizieren.
-const SINGLETONS = new Set(['siteSettings'])
+const SINGLETONS = new Set(['siteSettings', 'designSystem'])
 const SINGLETON_ACTIONS = new Set(['publish', 'discardChanges', 'restore'])
 
 export default defineConfig({
   name: 'default',
   title: 'vandenhoeck.de',
-  projectId: '4y4m7dt1',
+  projectId: 'o18b50z8',
   dataset: 'production',
   plugins: [structureTool({structure}), visionTool()],
   schema: {

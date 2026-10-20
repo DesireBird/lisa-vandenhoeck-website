@@ -11,7 +11,7 @@ export default function NotFound() {
     <section className="section section--paper">
       <div
         className="container narrative"
-        style={{ textAlign: "center", marginBlock: "var(--space-layout-lg)" }}
+        style={{ textAlign: "center", marginBlock: "var(--space-layout-l)" }}
       >
         <h1 className="narrative__heading">Hier ist leider nichts</h1>
         <div className="narrative__body">
@@ -19,8 +19,8 @@ export default function NotFound() {
         </div>
         <Link
           href="/"
-          className="btn btn--secondary"
-          style={{ marginTop: "var(--space-layout-sm)" }}
+          className="button button--secondary"
+          style={{ marginTop: "var(--space-layout-s)" }}
         >
           Zurück zur Startseite
         </Link>

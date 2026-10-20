@@ -3,7 +3,7 @@ import { createClient } from "@sanity/client";
 // Projekt-ID und Dataset sind öffentlich (Dataset „production“ ist public).
 // Abfragen laufen nur beim Build (statischer Export), ohne Token.
 export const sanityConfig = {
-  projectId: process.env.SANITY_PROJECT_ID || "4y4m7dt1",
+  projectId: process.env.SANITY_PROJECT_ID || "o18b50z8",
   dataset: process.env.SANITY_DATASET || "production",
 };
 

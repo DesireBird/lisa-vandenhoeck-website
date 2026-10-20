@@ -111,6 +111,113 @@ export type Slug = {
   source?: string;
 };
 
+export type DsPattern = {
+  _id: string;
+  _type: "dsPattern";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  slug: Slug;
+  order?: number;
+  summary: string;
+  body?: BlockContent;
+  components?: Array<
+    | "button"
+    | "formfield"
+    | "dropdown"
+    | "selection"
+    | "toggle"
+    | "segmented"
+    | "avatar"
+    | "listitem"
+    | "multiselect"
+    | "accordion"
+    | "displayfield"
+    | "flag"
+    | "chip"
+    | "card"
+    | "carousel"
+    | "banner"
+    | "divider"
+    | "alert"
+    | "header"
+    | "sidebar"
+  >;
+};
+
+export type DsComponent = {
+  _id: string;
+  _type: "dsComponent";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  component:
+    | "button"
+    | "formfield"
+    | "dropdown"
+    | "selection"
+    | "toggle"
+    | "segmented"
+    | "avatar"
+    | "listitem"
+    | "multiselect"
+    | "accordion"
+    | "displayfield"
+    | "flag"
+    | "chip"
+    | "card"
+    | "carousel"
+    | "banner"
+    | "divider"
+    | "alert"
+    | "header"
+    | "sidebar";
+  summary?: string;
+  notes?: BlockContent;
+  examples?: Array<{
+    title: string;
+    kind: "image" | "html";
+    image?: AccessibleImage;
+    html?: string;
+    text?: SimpleText;
+    links?: Array<{
+      label: string;
+      url: string;
+      _type: "exampleLink";
+      _key: string;
+    }>;
+    _type: "dsExample";
+    _key: string;
+  }>;
+  docsMarkdown?: string;
+  docsMeta?: {
+    title?: string;
+    status?: string;
+    version?: string;
+    updated?: string;
+    path?: string;
+    commit?: string;
+    syncedAt?: string;
+  };
+};
+
+export type DesignSystem = {
+  _id: string;
+  _type: "designSystem";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title: string;
+  teaser: string;
+  cover?: AccessibleImage;
+  intro?: BlockContent;
+  foundationIntro?: string;
+  componentsIntro?: string;
+  patternsIntro?: string;
+  seo?: Seo;
+};
+
 export type SanityFileAssetReference = {
   _ref: string;
   _type: "reference";
@@ -346,6 +453,9 @@ export type AllSanitySchemaTypes =
   | AccessibleImage
   | Page
   | Slug
+  | DsPattern
+  | DsComponent
+  | DesignSystem
   | SanityFileAssetReference
   | Resource
   | SanityImageCrop
@@ -551,6 +661,162 @@ export type ResourceBySlugQueryResult = {
   } | null;
 } | null;
 
+// Source: ../web/lib/queries.ts
+// Variable: designSystemQuery
+// Query: *[_type == "designSystem" && _id == "designSystem"][0] {    title, teaser, cover { asset, alt, hotspot, crop }, intro, foundationIntro, componentsIntro, patternsIntro, seo { title, description, ogImage { asset, alt, hotspot, crop } }  }
+export type DesignSystemQueryResult = {
+  title: string;
+  teaser: string;
+  cover: {
+    asset: SanityImageAssetReference | null;
+    alt: string | null;
+    hotspot: SanityImageHotspot | null;
+    crop: SanityImageCrop | null;
+  } | null;
+  intro: BlockContent | null;
+  foundationIntro: string | null;
+  componentsIntro: string | null;
+  patternsIntro: string | null;
+  seo: {
+    title: string | null;
+    description: string | null;
+    ogImage: {
+      asset: SanityImageAssetReference | null;
+      alt: string | null;
+      hotspot: SanityImageHotspot | null;
+      crop: SanityImageCrop | null;
+    } | null;
+  } | null;
+} | null;
+
+// Source: ../web/lib/queries.ts
+// Variable: dsComponentDocsQuery
+// Query: *[_type == "dsComponent" && defined(component)] { component, summary }
+export type DsComponentDocsQueryResult = Array<{
+  component:
+    | "accordion"
+    | "alert"
+    | "avatar"
+    | "banner"
+    | "button"
+    | "card"
+    | "carousel"
+    | "chip"
+    | "displayfield"
+    | "divider"
+    | "dropdown"
+    | "flag"
+    | "formfield"
+    | "header"
+    | "listitem"
+    | "multiselect"
+    | "segmented"
+    | "selection"
+    | "sidebar"
+    | "toggle";
+  summary: string | null;
+}>;
+
+// Source: ../web/lib/queries.ts
+// Variable: dsComponentDocQuery
+// Query: *[_type == "dsComponent" && component == $component][0] {    component, summary, notes, docsMarkdown, docsMeta,    examples[] { _key, title, kind, image { asset, alt, hotspot, crop }, html, text, links[] { _key, label, url } }  }
+export type DsComponentDocQueryResult = {
+  component:
+    | "accordion"
+    | "alert"
+    | "avatar"
+    | "banner"
+    | "button"
+    | "card"
+    | "carousel"
+    | "chip"
+    | "displayfield"
+    | "divider"
+    | "dropdown"
+    | "flag"
+    | "formfield"
+    | "header"
+    | "listitem"
+    | "multiselect"
+    | "segmented"
+    | "selection"
+    | "sidebar"
+    | "toggle";
+  summary: string | null;
+  notes: BlockContent | null;
+  docsMarkdown: string | null;
+  docsMeta: {
+    title?: string;
+    status?: string;
+    version?: string;
+    updated?: string;
+    path?: string;
+    commit?: string;
+    syncedAt?: string;
+  } | null;
+  examples: Array<{
+    _key: string;
+    title: string;
+    kind: "html" | "image";
+    image: {
+      asset: SanityImageAssetReference | null;
+      alt: string | null;
+      hotspot: SanityImageHotspot | null;
+      crop: SanityImageCrop | null;
+    } | null;
+    html: string | null;
+    text: SimpleText | null;
+    links: Array<{
+      _key: string;
+      label: string;
+      url: string;
+    }> | null;
+  }> | null;
+} | null;
+
+// Source: ../web/lib/queries.ts
+// Variable: dsPatternsQuery
+// Query: *[_type == "dsPattern" && defined(slug.current)] | order(order asc, title asc) { _id, title, "slug": slug.current, summary }
+export type DsPatternsQueryResult = Array<{
+  _id: string;
+  title: string;
+  slug: string;
+  summary: string;
+}>;
+
+// Source: ../web/lib/queries.ts
+// Variable: dsPatternBySlugQuery
+// Query: *[_type == "dsPattern" && slug.current == $slug][0] {    _id, title, "slug": slug.current, summary, body, components  }
+export type DsPatternBySlugQueryResult = {
+  _id: string;
+  title: string;
+  slug: string;
+  summary: string;
+  body: BlockContent | null;
+  components: Array<
+    | "accordion"
+    | "alert"
+    | "avatar"
+    | "banner"
+    | "button"
+    | "card"
+    | "carousel"
+    | "chip"
+    | "displayfield"
+    | "divider"
+    | "dropdown"
+    | "flag"
+    | "formfield"
+    | "header"
+    | "listitem"
+    | "multiselect"
+    | "segmented"
+    | "selection"
+    | "sidebar"
+    | "toggle"
+  > | null;
+} | null;
+
 // Query TypeMap
 declare global {
   interface SanityQueries {
@@ -560,6 +826,11 @@ declare global {
     '\n  *[_type == "page" && slug.current == $slug][0] {\n    _id, title, "slug": slug.current, intro, mainImage { asset, alt, hotspot, crop }, body, seo { title, description, ogImage { asset, alt, hotspot, crop } }\n  }\n': PageBySlugQueryResult;
     '\n  *[_type == "resource" && defined(slug.current)] | order(publishedAt desc) { _id, title, "slug": slug.current, teaser, publishedAt, cover { asset, alt, hotspot, crop } }\n': AllResourcesQueryResult;
     '\n  *[_type == "resource" && slug.current == $slug][0] {\n    _id, title, "slug": slug.current, teaser, publishedAt, cover { asset, alt, hotspot, crop }, body,\n    "fileUrl": file.asset->url, externalUrl, linkLabel, seo { title, description, ogImage { asset, alt, hotspot, crop } }\n  }\n': ResourceBySlugQueryResult;
+    '\n  *[_type == "designSystem" && _id == "designSystem"][0] {\n    title, teaser, cover { asset, alt, hotspot, crop }, intro, foundationIntro, componentsIntro, patternsIntro, seo { title, description, ogImage { asset, alt, hotspot, crop } }\n  }\n': DesignSystemQueryResult;
+    '\n  *[_type == "dsComponent" && defined(component)] { component, summary }\n': DsComponentDocsQueryResult;
+    '\n  *[_type == "dsComponent" && component == $component][0] {\n    component, summary, notes, docsMarkdown, docsMeta,\n    examples[] { _key, title, kind, image { asset, alt, hotspot, crop }, html, text, links[] { _key, label, url } }\n  }\n': DsComponentDocQueryResult;
+    '\n  *[_type == "dsPattern" && defined(slug.current)] | order(order asc, title asc) { _id, title, "slug": slug.current, summary }\n': DsPatternsQueryResult;
+    '\n  *[_type == "dsPattern" && slug.current == $slug][0] {\n    _id, title, "slug": slug.current, summary, body, components\n  }\n': DsPatternBySlugQueryResult;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too

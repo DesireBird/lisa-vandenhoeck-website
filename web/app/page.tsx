@@ -51,12 +51,12 @@ export default async function HomePage() {
             <p className="hero__sub">{settings.heroSub}</p>
             <a
               href={settings.bookingUrl}
-              className="btn btn--primary btn--lg btn--body-l"
+              className="button button--primary button--m button--body-l"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="btn__label-full">Jetzt Kennenlern-Gespräch buchen</span>
-              <span className="btn__label-short">Termin buchen</span>
+              <span className="button__label-full">Jetzt Kennenlern-Gespräch buchen</span>
+              <span className="button__label-short">Termin buchen</span>
             </a>
           </div>
           <div className="hero__visual">
@@ -414,12 +414,12 @@ export default async function HomePage() {
                     </p>
                     <a
                       href={settings.bookingUrl}
-                      className="btn scroll-card__cta btn--body-l"
+                      className="button scroll-card__cta button--body-l"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="btn__label-full">Jetzt Kennenlern-Gespräch buchen</span>
-                      <span className="btn__label-short">Termin buchen</span>
+                      <span className="button__label-full">Jetzt Kennenlern-Gespräch buchen</span>
+                      <span className="button__label-short">Termin buchen</span>
                     </a>
                   </div>
                 </div>
@@ -984,7 +984,7 @@ export default async function HomePage() {
                 </p>
                 <a
                   href={settings.bookingUrl}
-                  className="btn btn--primary check-cta"
+                  className="button button--primary check-cta"
                   id="checkCta"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1004,11 +1004,11 @@ export default async function HomePage() {
             <h2 className="section__heading" style={{ marginBottom: "0" }}>
               Drei Themen. Ein Anti-Steckenpferd pro Team ↓
             </h2>
-            <Link href="/services/" className="btn btn--secondary">
+            <Link href="/services/" className="button button--secondary">
               Alle Deep-Dives
             </Link>
           </div>
-          <p className="section__lead" style={{ marginTop: "var(--space-gap-lg)" }}>
+          <p className="section__lead" style={{ marginTop: "var(--space-gap-l)" }}>
             Jedes Team hat eins. Meins ist zufällig, genau das aufzulösen.
           </p>
           <div className="services-grid">
@@ -1032,13 +1032,13 @@ export default async function HomePage() {
               <div className="service-card__actions">
                 <a
                   href={settings.bookingUrl}
-                  className="btn btn--primary"
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buchen
                 </a>{" "}
-                <Link href="/figma-config/" className="btn btn--secondary">
+                <Link href="/figma-config/" className="button button--secondary">
                   Zum Deep-Dive
                 </Link>
               </div>
@@ -1090,13 +1090,13 @@ export default async function HomePage() {
               <div className="service-card__actions">
                 <a
                   href={settings.bookingUrl}
-                  className="btn btn--primary"
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buchen
                 </a>{" "}
-                <Link href="/ki-ready/" className="btn btn--secondary">
+                <Link href="/ki-ready/" className="button button--secondary">
                   Zum Deep-Dive
                 </Link>
               </div>
@@ -1144,13 +1144,13 @@ export default async function HomePage() {
               <div className="service-card__actions">
                 <a
                   href={settings.bookingUrl}
-                  className="btn btn--primary"
+                  className="button button--primary"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Buchen
                 </a>{" "}
-                <Link href="/bfsg/" className="btn btn--secondary">
+                <Link href="/bfsg/" className="button button--secondary">
                   Zum Deep-Dive
                 </Link>
               </div>

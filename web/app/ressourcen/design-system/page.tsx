@@ -54,10 +54,10 @@ export default async function DesignSystemPage() {
         <ul className="resource-grid">
           {sections.map((s) => (
             <li key={s.href}>
-              <Link href={s.href} className="resource-card">
+              <Link href={s.href} className="card card--link">
                 <span className="ds-card__meta">{s.meta}</span>
-                <span className="resource-card__title">{s.title}</span>
-                <p className="resource-card__teaser">{s.text}</p>
+                <h2 className="card__title">{s.title}</h2>
+                <p className="card__body">{s.text}</p>
               </Link>
             </li>
           ))}

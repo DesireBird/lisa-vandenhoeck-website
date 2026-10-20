@@ -24,10 +24,10 @@ export default async function FoundationPage() {
         <ul className="resource-grid">
           {foundationCategories.map((c, i) => (
             <li key={c.slug}>
-              <Link href={`${dsBase}/foundation/${c.slug}/`} className="resource-card">
+              <Link href={`${dsBase}/foundation/${c.slug}/`} className="card card--link">
                 <span className="ds-card__meta">{counts[i]} Tokens</span>
-                <span className="resource-card__title">{c.title}</span>
-                <p className="resource-card__teaser">{c.lead}</p>
+                <h2 className="card__title">{c.title}</h2>
+                <p className="card__body">{c.lead}</p>
               </Link>
             </li>
           ))}

@@ -23,9 +23,9 @@ export default async function ComponentsPage() {
         <ul className="resource-grid">
           {getDsComponents().map((c) => (
             <li key={c.id}>
-              <Link href={`${dsBase}/components/${c.id}/`} className="resource-card">
-                <span className="resource-card__title">{c.title}</span>
-                <p className="resource-card__teaser">{summaries.get(c.id) || c.subtitle}</p>
+              <Link href={`${dsBase}/components/${c.id}/`} className="card card--link">
+                <h2 className="card__title">{c.title}</h2>
+                <p className="card__body">{summaries.get(c.id) || c.subtitle}</p>
               </Link>
             </li>
           ))}

@@ -1422,38 +1422,30 @@ p.process-result__body {
   list-style: none;
 }
 
-.resource-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-gap-md);
-  height: 100%;
-  padding: var(--space-inset-sm);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-surface);
-  background-color: var(--color-surface-default);
+/* Ganze Card (DS-Component .card) als Link: Hover hebt an, Fokus sichtbar */
+.card--link {
   color: inherit;
   text-decoration: none;
-  box-shadow: var(--elevation-sm);
+  transition: box-shadow 150ms ease;
 }
 
-.resource-card:hover {
-  box-shadow: var(--elevation-lg);
+.card--link:hover {
+  box-shadow: var(--elevation-md);
 }
 
-.resource-card__image {
-  display: block;
-  width: 100%;
+.card--link:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.resource-grid > li {
+  display: flex;
+}
+
+.resource-grid > li > .card {
+  flex: 1;
+}
+
+.resource-grid__image {
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-surface);
-}
-
-.resource-card__title {
-  font: var(--text-style-body-l);
-  font-weight: var(--weight-bold);
-}
-
-.resource-card__teaser {
-  font: var(--text-style-body-m);
-  color: var(--color-text-muted);
 }

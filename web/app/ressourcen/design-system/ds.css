@@ -1,38 +1,25 @@
 /* Design-System-Bereich (/ressourcen/design-system/). Nur Tokens, keine Einzelwerte. */
 
-/* ── Bereichsnavigation: aktiver Eintrag = Selection-State (accent2) ── */
-.ds-nav {
-  border-bottom: 1px solid var(--color-border-default);
-  background-color: var(--color-surface-default);
+/* ── Sidebar aus dem Design System (Sidebar.css) unter dem sticky Website-Header ──
+   Sidebar.css geht von einer Seite ohne Kopfzeile aus (top: 0, 100vh). Hier beginnen
+   Leiste, Drawer und mobile Topbar unter .site-nav; --ds-header-offset setzt DsSidebar. */
+.ds-shell .sidebar,
+.ds-shell .sidebar__drawer {
+  top: var(--ds-header-offset, 0px);
+  height: calc(100vh - var(--ds-header-offset, 0px));
 }
 
-.ds-nav__list {
-  display: flex;
-  gap: var(--space-gap-lg);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: auto;
+.ds-shell .sidebar-topbar {
+  top: var(--ds-header-offset, 0px);
 }
 
-.ds-nav__link {
-  display: block;
-  padding: var(--space-inset-sm) 0;
-  border-bottom: 2px solid transparent;
-  font: var(--text-style-label);
-  font-weight: var(--weight-medium);
-  color: var(--color-text-muted);
-  text-decoration: none;
-  white-space: nowrap;
+.ds-shell .app-body {
+  min-height: calc(100vh - var(--ds-header-offset, 0px));
 }
 
-.ds-nav__link:hover {
-  color: var(--color-text-default);
-}
-
-.ds-nav__link[aria-current="page"] {
-  border-bottom-color: var(--color-border-accent2);
-  color: var(--color-text-accent2);
+/* Inhalt darf nicht scrollen/clippen (Dropdown-Listen in den Demos ragen über) */
+.ds-shell .app-content {
+  overflow: visible;
 }
 
 /* ── Allgemein ── */

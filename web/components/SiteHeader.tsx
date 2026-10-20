@@ -45,7 +45,7 @@ export function SiteHeader() {
         </Link>
         <button
           type="button"
-          className={`site-nav__toggle${navOpen ? " is-open" : ""}`}
+          className={`site-nav__toggle${navOpen ? " is-expanded" : ""}`}
           aria-expanded={navOpen}
           aria-controls="siteNavList"
           aria-label={navOpen ? "Menü schließen" : "Menü öffnen"}
@@ -79,11 +79,11 @@ export function SiteHeader() {
           </svg>
         </button>
         <nav aria-label="Hauptnavigation">
-          <ul className={`site-nav__list${navOpen ? " is-open" : ""}`} id="siteNavList">
+          <ul className={`site-nav__list${navOpen ? " is-expanded" : ""}`} id="siteNavList">
             <li className="site-nav__item site-nav__item--dropdown" ref={dropdownRef}>
               <button
                 type="button"
-                className={`site-nav__link site-nav__dropdown-toggle${servicesOpen ? " is-open" : ""}`}
+                className={`site-nav__link site-nav__dropdown-toggle${servicesOpen ? " is-expanded" : ""}`}
                 aria-expanded={servicesOpen}
                 aria-controls="servicesMenu"
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -107,7 +107,7 @@ export function SiteHeader() {
                 </svg>
               </button>
               <ul
-                className={`site-nav__dropdown${servicesOpen ? " is-open" : ""}`}
+                className={`site-nav__dropdown${servicesOpen ? " is-expanded" : ""}`}
                 id="servicesMenu"
               >
                 {services.map((s) => (

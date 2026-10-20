@@ -207,7 +207,7 @@ export default async function AboutPage() {
           <h2 className="section__heading">Sollen wir loslegen?</h2>
           <a
             href={bookingUrl}
-            className="btn btn--primary"
+            className="button button--primary"
             target="_blank"
             rel="noopener noreferrer"
           >

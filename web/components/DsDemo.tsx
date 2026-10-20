@@ -52,14 +52,14 @@ export function DsDemo({ html }: { html: string }) {
 
       if (trigger) {
         trigger.textContent = placeholder;
-        trigger.classList.toggle("is-placeholder", !!placeholder);
+        trigger.classList.toggle("is-placeholder-shown", !!placeholder);
       }
       const open = () => {
-        wrapper.classList.add("is-open");
+        wrapper.classList.add("is-expanded");
         control?.setAttribute("aria-expanded", "true");
       };
       const close = () => {
-        wrapper.classList.remove("is-open");
+        wrapper.classList.remove("is-expanded");
         control?.setAttribute("aria-expanded", "false");
       };
       const filterOptions = (query: string) => {
@@ -91,7 +91,7 @@ export function DsDemo({ html }: { html: string }) {
         const isNone = opt.classList.contains("dropdown__option--none");
         if (trigger) {
           trigger.textContent = (opt.textContent ?? "").trim();
-          trigger.classList.toggle("is-placeholder", isNone);
+          trigger.classList.toggle("is-placeholder-shown", isNone);
         }
         if (input) {
           input.value = isNone ? "" : (opt.textContent ?? "").trim();
@@ -101,7 +101,7 @@ export function DsDemo({ html }: { html: string }) {
       };
 
       if (trigger)
-        on(trigger, "click", () => (wrapper.classList.contains("is-open") ? close() : open()));
+        on(trigger, "click", () => (wrapper.classList.contains("is-expanded") ? close() : open()));
       if (input) {
         on(input, "focus", open);
         on(input, "input", () => {
@@ -119,7 +119,7 @@ export function DsDemo({ html }: { html: string }) {
         if (!wrapper.contains(e.target as Node)) close();
       });
       on(document, "keydown", (e) => {
-        if (e.key === "Escape" && wrapper.classList.contains("is-open")) close();
+        if (e.key === "Escape" && wrapper.classList.contains("is-expanded")) close();
       });
     });
 

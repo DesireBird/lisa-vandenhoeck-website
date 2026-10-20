@@ -137,7 +137,7 @@ export const foundationCategories = [
     slug: "typografie",
     title: "Typografie",
     lead: "Schriftfamilien, Größen, Gewichte und die fertigen Textstile.",
-    prefixes: ["font", "fontSize", "weight", "letter-spacing", "text-style"],
+    prefixes: ["font", "fontSize", "weight", "letterSpacing", "textStyle"],
   },
   {
     slug: "abstaende",

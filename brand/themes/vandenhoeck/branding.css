@@ -161,6 +161,7 @@
   --width-page: 1280px; /** Seitenbegrenzung. */
   --width-sidebar: 96px; /** Schmale Sidebar-Leiste (Icon oben, Label darunter, quadratische Items). */
   --width-sidebar-drawer: 224px; /** Overlay-Drawer der Sidebar (Level 2 + Level 3). */
+  --width-reading: 900px; /** Lesebreite für Doku-Inhalte (Design-System-Bereich): angenehme Zeilenlänge neben der Sidebar. */
   --opacity-disabled: 0.5; /** Opacity für deaktivierte interaktive Elemente. */
   --offset-icon-text: 2px; /** Optischer Versatz: Icon top-align mit der ersten Textzeile (line-height-Ausgleich). */
   --elevation-s: 0px 0px 4px 0px #00000018; /** Gleichmäßiger Halo (Licht von oben). Dark Mode: Schatten tragen schlecht. */

@@ -17,22 +17,10 @@
   min-height: calc(100vh - var(--ds-header-offset, 0px));
 }
 
-/* Sidebar + Inhalt in Seitenbreite wie der Rest der Website (nicht vollflächig).
-   Der Drawer ist in Sidebar.css fixed am Viewport-Rand verankert → um den Versatz des
-   Containers verschieben (--ds-shell-left setzt DsSidebar). */
-.ds-shell .app-body {
-  max-width: var(--width-page);
-  margin-inline: auto;
-}
-
-.ds-shell .sidebar__drawer {
-  left: calc(var(--ds-shell-left, 0px) + var(--width-sidebar));
-}
-
-@media (min-width: 769px) {
-  .ds-shell .sidebar {
-    border-left: 1px solid var(--color-border-default);
-  }
+/* Inhalt in Lesebreite (width.reading, 900px) zentriert neben der Sidebar; die Sidebar
+   bleibt am linken Rand. */
+.ds-shell .app-content .container {
+  max-width: var(--width-reading);
 }
 
 /* Inhalt darf nicht scrollen/clippen (Dropdown-Listen in den Demos ragen über) */

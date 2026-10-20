@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CopySpecButton } from "@/components/CopySpecButton";
 import { DsDemo } from "@/components/DsDemo";
 import { RichText } from "@/components/RichText";
 import { SanityImg } from "@/components/SanityImg";
@@ -55,6 +56,10 @@ export default async function ComponentPage({
         )}
         {doc?.docsMarkdown ? (
           <div className="ds-doc">
+            <div className="ds-doc__header">
+              <h2 className="ds-doc__heading">Spec</h2>
+              <CopySpecButton markdown={doc.docsMarkdown} />
+            </div>
             <div
               className="narrative__body rich-text ds-markdown"
               dangerouslySetInnerHTML={{

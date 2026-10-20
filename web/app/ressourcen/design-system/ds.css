@@ -283,6 +283,21 @@
   margin-right: var(--space-gap-s);
 }
 
+/* „Spec“-Überschrift mit „Copy Spec as MD“ daneben */
+.ds-doc__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-gap-m);
+  margin-bottom: var(--space-gap-l);
+}
+
+.ds-doc__heading {
+  margin: 0;
+  font: var(--text-style-headline-m);
+  font-weight: var(--weight-bold);
+}
+
 .ds-doc__meta {
   margin-top: var(--space-gap-l);
   font: var(--text-style-caption-meta);

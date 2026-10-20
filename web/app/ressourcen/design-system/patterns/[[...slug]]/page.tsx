@@ -56,9 +56,9 @@ async function PatternList() {
           <ul className="resource-grid">
             {patterns.map((p) => (
               <li key={p._id}>
-                <Link href={`${dsBase}/patterns/${p.slug}/`} className="resource-card">
-                  <span className="resource-card__title">{p.title}</span>
-                  <p className="resource-card__teaser">{p.summary}</p>
+                <Link href={`${dsBase}/patterns/${p.slug}/`} className="card card--link">
+                  <h2 className="card__title">{p.title}</h2>
+                  <p className="card__body">{p.summary}</p>
                 </Link>
               </li>
             ))}

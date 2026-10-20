@@ -52,28 +52,35 @@ async function ResourceList() {
         <ul className="resource-grid">
           {/* Design System steht immer vorne; Texte aus Sanity (designSystem), Inhalte aus dem Code */}
           <li>
-            <Link href={`${dsBase}/`} className="resource-card">
+            <Link
+              href={`${dsBase}/`}
+              className={`card card--link${ds.cover?.asset ? " card--image" : ""}`}
+            >
               {ds.cover?.asset ? (
                 <SanityImg
                   image={ds.cover}
                   sizes="(min-width: 769px) 33vw, 100vw"
-                  className="resource-card__image"
+                  className="card__image resource-grid__image"
                 />
               ) : null}
-              <span className="resource-card__title">{ds.title}</span>
-              <p className="resource-card__teaser">{ds.teaser}</p>
+              <div className="card__content">
+                <h2 className="card__title">{ds.title}</h2>
+                <p className="card__body">{ds.teaser}</p>
+              </div>
             </Link>
           </li>
           {resources.map((resource) => (
             <li key={resource._id}>
-              <Link href={`/ressourcen/${resource.slug}/`} className="resource-card">
+              <Link href={`/ressourcen/${resource.slug}/`} className="card card--link card--image">
                 <SanityImg
                   image={resource.cover}
                   sizes="(min-width: 769px) 33vw, 100vw"
-                  className="resource-card__image"
+                  className="card__image resource-grid__image"
                 />
-                <span className="resource-card__title">{resource.title}</span>
-                <p className="resource-card__teaser">{resource.teaser}</p>
+                <div className="card__content">
+                  <h2 className="card__title">{resource.title}</h2>
+                  <p className="card__body">{resource.teaser}</p>
+                </div>
               </Link>
             </li>
           ))}

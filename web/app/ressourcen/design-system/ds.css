@@ -96,13 +96,9 @@
   list-style: none;
 }
 
+/* Token-Kachel = DS-Card (.card), nur nebeneinander statt untereinander */
 .ds-token {
-  display: flex;
-  gap: var(--space-gap-md);
-  padding: var(--space-inset-sm);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-surface);
-  background-color: var(--color-surface-default);
+  flex-direction: row;
 }
 
 .ds-token__preview {

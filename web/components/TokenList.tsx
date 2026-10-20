@@ -65,7 +65,7 @@ export function TokenList({ tokens }: { tokens: Token[] }) {
   return (
     <ul className="ds-token-list">
       {tokens.map((token) => (
-        <li key={token.path} className="ds-token">
+        <li key={token.path} className="card ds-token">
           <div className="ds-token__preview">
             <TokenPreview token={token} />
           </div>

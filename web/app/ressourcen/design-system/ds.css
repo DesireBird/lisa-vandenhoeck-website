@@ -221,35 +221,95 @@
   border-radius: 0 0 var(--radius-surface-m) var(--radius-surface-m);
 }
 
-/* ── Do / Don't ── */
-.ds-dodont {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-gap-l);
-  margin-top: var(--space-layout-s);
-}
-
-.ds-dodont__col {
-  padding: var(--space-inset-m);
-  border-radius: var(--radius-surface-m);
-  border: 1px solid var(--color-border-default);
-}
-
-.ds-dodont__col--do {
-  border-color: var(--color-positive-border);
-  background-color: var(--color-positive-surface);
-}
-
-.ds-dodont__col--dont {
-  border-color: var(--color-danger-border);
-  background-color: var(--color-danger-surface);
-}
-
-.ds-dodont__label {
-  display: block;
-  margin-bottom: var(--space-gap-s);
-  font: var(--text-style-label);
+/* ── Component-Doku aus dem DS-Repo (Markdown) ── */
+.ds-markdown h2 {
+  margin: var(--space-layout-s) 0 var(--space-gap-m);
+  font: var(--text-style-title-m);
   font-weight: var(--weight-bold);
+  color: var(--color-text-default);
+}
+
+.ds-markdown h3 {
+  margin: var(--space-gap-l) 0 var(--space-gap-s);
+  font: var(--text-style-title-s);
+  font-weight: var(--weight-bold);
+}
+
+.ds-markdown code {
+  padding: 0 var(--space-gap-s);
+  border-radius: var(--radius-control-s);
+  background-color: var(--color-fill-neutral-subtle);
+  font-size: 0.9em;
+}
+
+.ds-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-gap-m) 0;
+  font: var(--text-style-body-s);
+}
+
+.ds-markdown th,
+.ds-markdown td {
+  padding: var(--space-gap-s) var(--space-gap-m);
+  border-bottom: 1px solid var(--color-border-default);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ds-markdown th {
+  font-weight: var(--weight-bold);
+  color: var(--color-text-default);
+}
+
+.ds-markdown a {
+  color: var(--color-text-accent2);
+}
+
+/* GFM-Aufgabenlisten (Abschnitt „Offen“) */
+.ds-markdown li:has(> input[type="checkbox"]) {
+  list-style: none;
+}
+
+.ds-markdown li > input[type="checkbox"] {
+  margin-right: var(--space-gap-s);
+}
+
+.ds-doc__meta {
+  margin-top: var(--space-gap-l);
+  font: var(--text-style-caption-meta);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+}
+
+/* ── Eigene Beispiele aus Sanity ── */
+.ds-examples {
+  display: grid;
+  gap: var(--space-gap-l);
+}
+
+.ds-example {
+  margin: 0;
+}
+
+.ds-example__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-surface-m);
+}
+
+.ds-example__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ds-example__links a {
+  color: var(--color-text-accent2);
 }
 
 .ds-chip-links {

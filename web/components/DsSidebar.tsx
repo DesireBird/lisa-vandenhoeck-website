@@ -90,19 +90,6 @@ export function DsSidebar({
     };
   }, [overlayOpen]);
 
-  // Linke Kante des zentrierten Containers → Drawer daneben positionieren (ds.css)
-  useEffect(() => {
-    const shell = shellRef.current;
-    const body = shell?.querySelector<HTMLElement>(".app-body");
-    if (!shell || !body) return;
-    const update = () =>
-      shell.style.setProperty("--ds-shell-left", `${body.getBoundingClientRect().left}px`);
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(document.documentElement);
-    return () => observer.disconnect();
-  }, []);
-
   // Höhe des sticky Website-Headers → Sidebar und Drawer beginnen darunter (ds.css)
   useEffect(() => {
     const header = document.querySelector<HTMLElement>(".site-nav");

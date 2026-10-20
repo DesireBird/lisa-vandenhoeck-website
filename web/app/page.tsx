@@ -51,7 +51,7 @@ export default async function HomePage() {
             <p className="hero__sub">{settings.heroSub}</p>
             <a
               href={settings.bookingUrl}
-              className="button button--primary button--l button--body-l"
+              className="button button--primary button--m button--body-l"
               target="_blank"
               rel="noopener noreferrer"
             >

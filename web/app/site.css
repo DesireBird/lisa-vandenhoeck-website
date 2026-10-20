@@ -242,12 +242,12 @@ img {
   line-height: 1.6;
 }
 
-/* Large button variant for hero CTA */
+/* Große Buttons (DS: M = Hero-CTA, L = allein in einer Section): Höhe und Schrift aus
+   dem Design System, hier nur Website-Layout */
+.button--m,
 .button--l {
-  height: var(--size-control-l);
   padding: 0 var(--space-layout-s);
   align-self: flex-start;
-  border-radius: var(--radius-control-m);
 }
 
 /* ── Tilt Card ────────────────────────────────────────────── */
@@ -1045,13 +1045,21 @@ img {
     display: inline;
   }
 
+  .button--m,
   .button--l {
     width: 100%;
     align-self: stretch;
     white-space: normal;
     height: auto;
-    min-height: var(--size-control-l);
     text-align: center;
+  }
+
+  .button--m {
+    min-height: var(--size-button-m);
+  }
+
+  .button--l {
+    min-height: var(--size-button-l);
   }
 
   .quote-word {

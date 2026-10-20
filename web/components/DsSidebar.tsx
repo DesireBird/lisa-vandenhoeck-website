@@ -150,7 +150,7 @@ export function DsSidebar({
                     <li key={s.key} className="sidebar__item">
                       <Link
                         href={s.href}
-                        className={`sidebar__link${isActive(s.href) ? " sidebar__link--active" : ""}`}
+                        className={`sidebar__link${isActive(s.href) ? " sidebar__link--current" : ""}`}
                         aria-current={isActive(s.href) ? "page" : undefined}
                       >
                         {s.icon}
@@ -164,13 +164,13 @@ export function DsSidebar({
                 return (
                   <li
                     key={s.key}
-                    className={`sidebar__item sidebar__item--has-children${opened ? " is-drawer-open" : ""}`}
+                    className={`sidebar__item sidebar__item--has-children${opened ? " is-expanded" : ""}`}
                     onMouseEnter={() => open(s.key)}
                     onMouseLeave={scheduleClose}
                   >
                     <button
                       type="button"
-                      className={`sidebar__link${inSection(s) ? " sidebar__link--parent-active" : ""}`}
+                      className={`sidebar__link${inSection(s) ? " sidebar__link--has-current" : ""}`}
                       aria-haspopup="true"
                       aria-expanded={opened}
                       aria-controls={drawerId}
@@ -193,7 +193,7 @@ export function DsSidebar({
                         <li>
                           <Link
                             href={s.href}
-                            className={`sidebar__drawer-link${isActive(s.href) ? " sidebar__drawer-link--active" : ""}`}
+                            className={`sidebar__drawer-link${isActive(s.href) ? " sidebar__drawer-link--current" : ""}`}
                             aria-current={isActive(s.href) ? "page" : undefined}
                           >
                             Übersicht
@@ -203,7 +203,7 @@ export function DsSidebar({
                           <li key={c.href}>
                             <Link
                               href={c.href}
-                              className={`sidebar__drawer-link${isActive(c.href) ? " sidebar__drawer-link--active" : ""}`}
+                              className={`sidebar__drawer-link${isActive(c.href) ? " sidebar__drawer-link--current" : ""}`}
                               aria-current={isActive(c.href) ? "page" : undefined}
                             >
                               {c.label}
@@ -238,7 +238,7 @@ export function DsSidebar({
                   <li key={s.key}>
                     <Link
                       href={s.href}
-                      className={`sidebar-overlay__link${isActive(s.href) ? " sidebar-overlay__link--active" : ""}`}
+                      className={`sidebar-overlay__link${isActive(s.href) ? " sidebar-overlay__link--current" : ""}`}
                       aria-current={isActive(s.href) ? "page" : undefined}
                       onClick={() => setOverlayOpen(false)}
                     >
@@ -254,7 +254,7 @@ export function DsSidebar({
                 <li key={s.key}>
                   <button
                     type="button"
-                    className={`sidebar-overlay__toggle${inSection(s) ? " sidebar-overlay__toggle--parent-active" : ""}`}
+                    className={`sidebar-overlay__toggle${inSection(s) ? " sidebar-overlay__toggle--has-current" : ""}`}
                     aria-expanded={subOpen}
                     aria-controls={subId}
                     onClick={() => setOverlaySub((prev) => ({ ...prev, [s.key]: !subOpen }))}
@@ -265,12 +265,12 @@ export function DsSidebar({
                     </span>
                     {chevronDown}
                   </button>
-                  <ul className={`sidebar-overlay__sub${subOpen ? " is-open" : ""}`} id={subId}>
+                  <ul className={`sidebar-overlay__sub${subOpen ? " is-expanded" : ""}`} id={subId}>
                     {[{ href: s.href, label: "Übersicht" }, ...s.children].map((c) => (
                       <li key={c.href}>
                         <Link
                           href={c.href}
-                          className={`sidebar-overlay__sub-link${isActive(c.href) ? " sidebar-overlay__sub-link--active" : ""}`}
+                          className={`sidebar-overlay__sub-link${isActive(c.href) ? " sidebar-overlay__sub-link--current" : ""}`}
                           aria-current={isActive(c.href) ? "page" : undefined}
                           onClick={() => setOverlayOpen(false)}
                         >

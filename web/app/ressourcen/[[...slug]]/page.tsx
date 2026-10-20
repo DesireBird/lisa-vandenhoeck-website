@@ -112,7 +112,12 @@ async function ResourceDetail({ slug }: { slug: string }) {
           <RichText value={resource.body} />
         </div>
         {href ? (
-          <a href={href} className="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+          <a
+            href={href}
+            className="button button--secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {resource.linkLabel || "Herunterladen"}
           </a>
         ) : null}

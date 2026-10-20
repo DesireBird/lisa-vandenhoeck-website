@@ -35,7 +35,7 @@ function TokenPreview({ token }: { token: Token }) {
       </span>
     );
   }
-  if (group === "letter-spacing") {
+  if (group === "letterSpacing") {
     return (
       <span className="ds-token__specimen ds-token__specimen--caps" style={{ letterSpacing: v }}>
         Caption

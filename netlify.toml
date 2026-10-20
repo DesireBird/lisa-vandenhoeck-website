@@ -8,7 +8,7 @@
   publish = "out"
   # Build überspringen nur, wenn sich nichts geändert hat, was in die Seite einfließt.
   # Standard bei Monorepos prüft nur web/ – Tokens und Components (brand/) gehören aber dazu.
-  # Builds über einen Build-Hook (später Sanity) laufen immer.
+  # Builds über einen Build-Hook (Sanity-Webhook beim Veröffentlichen) laufen immer.
   ignore = "[ -z \"$INCOMING_HOOK_TITLE\" ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../brand ../netlify.toml"
 
 [build.environment]
@@ -23,6 +23,7 @@
 
 # Sicherheits-Header für alle Seiten.
 # CSP: Next.js-Export braucht Inline-Skripte/-Styles ('unsafe-inline'). Calendly ist nur verlinkt.
+# img-src cdn.sanity.io: Bilder aus Sanity kommen direkt vom Sanity-CDN (siehe Datenschutz, Abschnitt 4).
 # frame-src app.netlify.com: Netlify-Toolbar in Deploy Previews.
 [[headers]]
   for = "/*"
@@ -31,4 +32,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://app.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.sanity.io; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://app.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"

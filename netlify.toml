@@ -14,6 +14,15 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Staging (main) und Deploy Previews kosten keine Credits: immer bauen.
+# Die Ignore-Regel oben vergleicht mit dem zuletzt gebauten Commit; bei main war das nach dem
+# Wechsel des Production branch auf live ein falscher Bezug → Build wurde übersprungen (20.10.2026).
+[context.branch-deploy]
+  ignore = "exit 1"
+
+[context.deploy-preview]
+  ignore = "exit 1"
+
 # Dateien unter /_next/static/ und Fonts haben feste Inhalte: ein Jahr im Browser cachen.
 # HTML bleibt bei Netlifys Standard (immer frisch prüfen).
 [[headers]]

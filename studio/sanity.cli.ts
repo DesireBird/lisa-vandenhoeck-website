@@ -2,7 +2,7 @@ import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
   api: {
-    projectId: '4y4m7dt1',
+    projectId: 'o18b50z8',
     dataset: 'production',
   },
   // Auf Sanity gehostet: https://vandenhoeck.sanity.studio
@@ -15,7 +15,7 @@ export default defineCliConfig({
     overloadClientMethods: true,
   },
   deployment: {
-    appId: 'cor8l2iasbbw0bbyb5ao2r4t',
+    appId: 'jpycbp4j5wgn0z48p7lcjm6r',
     autoUpdates: true,
   },
 })

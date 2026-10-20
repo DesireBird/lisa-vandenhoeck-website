@@ -3,13 +3,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RichText } from "@/components/RichText";
 import { SanityImg } from "@/components/SanityImg";
+import { dsBase, getDsContent } from "@/lib/dsContent";
 import { getAllResources, getResource } from "@/lib/queries";
 import { sanityMetadata } from "@/lib/seo";
 
 /*
  * /ressourcen/ (Liste) und /ressourcen/<slug>/ (Detail) in einer optionalen Catch-all-Route:
- * Der statische Export braucht pro dynamischer Route mindestens einen Pfad – die Liste gibt es immer,
- * auch solange in Sanity noch keine Ressource liegt.
+ * Der statische Export braucht pro dynamischer Route mindestens einen Pfad – die Liste gibt es immer.
+ * /ressourcen/design-system/ ist eine eigene Route (app/ressourcen/design-system), Slug reserviert.
  */
 export const dynamicParams = false;
 
@@ -42,66 +43,43 @@ export default async function RessourcenPage({ params }: PageProps<"/ressourcen/
 }
 
 async function ResourceList() {
-  const resources = await getAllResources();
-  if (resources.length) {
-    return (
-      <section className="section section--paper">
-        <div className="container">
-          <span className="flag flag--neutral">Ressourcen</span>
-          <h1 className="section__heading resource-list__heading">Ressourcen</h1>
-          <ul className="resource-grid">
-            {resources.map((resource) => (
-              <li key={resource._id}>
-                <Link href={`/ressourcen/${resource.slug}/`} className="resource-card">
-                  <SanityImg
-                    image={resource.cover}
-                    sizes="(min-width: 769px) 33vw, 100vw"
-                    className="resource-card__image"
-                  />
-                  <span className="resource-card__title">{resource.title}</span>
-                  <p className="resource-card__teaser">{resource.teaser}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    );
-  }
-
-  // Noch keine Ressourcen in Sanity → Baustellen-Hinweis.
+  const [resources, ds] = await Promise.all([getAllResources(), getDsContent()]);
   return (
-    <>
-      {/* ── Baustelle ──────────────────────────────────────────── */}
-      <section className="section section--paper">
-        <div
-          className="container narrative"
-          style={{
-            textAlign: "center",
-            marginTop: "var(--space-layout-lg)",
-            marginBottom: "var(--space-layout-lg)",
-          }}
-        >
-          <span className="flag flag--neutral">Ressourcen</span>
-          <h1 className="narrative__heading" style={{ marginTop: "var(--space-gap-md)" }}>
-            Diese Seite ist noch im Aufbau
-          </h1>
-          <div className="narrative__body">
-            <p>
-              Was Gutes braucht Zeit. Eine Standard-Seite wollte ich hier nicht vorsetzen – deshalb
-              baue ich noch ein bisschen länger.
-            </p>
-          </div>
-          <Link
-            href="/"
-            className="btn btn--secondary"
-            style={{ marginTop: "var(--space-layout-sm)" }}
-          >
-            Zurück zur Startseite
-          </Link>
-        </div>
-      </section>
-    </>
+    <section className="section section--paper">
+      <div className="container">
+        <span className="flag flag--neutral">Ressourcen</span>
+        <h1 className="section__heading resource-list__heading">Ressourcen</h1>
+        <ul className="resource-grid">
+          {/* Design System steht immer vorne; Texte aus Sanity (designSystem), Inhalte aus dem Code */}
+          <li>
+            <Link href={`${dsBase}/`} className="resource-card">
+              {ds.cover?.asset ? (
+                <SanityImg
+                  image={ds.cover}
+                  sizes="(min-width: 769px) 33vw, 100vw"
+                  className="resource-card__image"
+                />
+              ) : null}
+              <span className="resource-card__title">{ds.title}</span>
+              <p className="resource-card__teaser">{ds.teaser}</p>
+            </Link>
+          </li>
+          {resources.map((resource) => (
+            <li key={resource._id}>
+              <Link href={`/ressourcen/${resource.slug}/`} className="resource-card">
+                <SanityImg
+                  image={resource.cover}
+                  sizes="(min-width: 769px) 33vw, 100vw"
+                  className="resource-card__image"
+                />
+                <span className="resource-card__title">{resource.title}</span>
+                <p className="resource-card__teaser">{resource.teaser}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
 

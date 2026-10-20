@@ -2,7 +2,7 @@ import { getSettings } from "@/lib/settings";
 
 /** „Termin buchen“-CTA. Ziel kommt aus den Seiteneinstellungen (Sanity). */
 export async function BookingButton({
-  className = "button button--primary button--l button--body-l",
+  className = "button button--primary button--m button--body-l",
 }) {
   const { bookingUrl } = await getSettings();
   return (

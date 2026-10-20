@@ -129,6 +129,8 @@
   --size-control-s: 32px; /** Control-Höhe klein. */
   --size-control-m: 40px; /** Control-Höhe mittel (Standard). */
   --size-control-l: 48px; /** Control-Höhe gross. */
+  --size-button-m: 48px; /** Button-Höhe M – hervorgehobene Buttons, z. B. Hero-CTA. */
+  --size-button-l: 56px; /** Button-Höhe L – Ausnahme: prominenter Button allein in einer Section (Landingpage). */
   --size-icon-s: 16px; /** Icon neben Body-Text (body.s/label). */
   --size-icon-m: 20px; /** Icon neben Body-Text (body.m). */
   --size-icon-l: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */
@@ -212,6 +214,7 @@
   --space-layout-m: var(--space-7); /** Sektionsabstand mittel. */
   --space-layout-l: var(--space-9); /** Sektionsabstand gross. */
   --space-layout-gutter: var(--space-5); /** Horizontaler Seitenrand (links/rechts), z. B. Header-Padding. */
+  --size-button-s: var(--size-control-m); /** Button-Höhe S = Standard. Immer gleich hoch wie alle Controls (size.control.m), damit beides in einer Reihe kombinierbar ist. */
   --font-family-caption: var(--font-family-body); /** Caption-Familie = Body-Familie (Plus Jakarta Sans). Eigener Token bleibt, damit Caption unabhängig drehbar ist. Abgrenzung zu body über line-height, Farbe (text.muted) und ggf. Versalien + Letter-Spacing. */
   --text-style-heroshot: clamp(var(--font-size-500), 3.2vw, 48px)/1.1 var(--font-family-heading); /** Nur für die H1 im Hero. Fluid zwischen fontSize.500 (24px) und 48px über die Viewport-Breite. Gewicht separat. */
   --text-style-headline-s: var(--font-size-400)/1.3 var(--font-family-heading); /** Headline klein. Heading-Familie, 18px. */

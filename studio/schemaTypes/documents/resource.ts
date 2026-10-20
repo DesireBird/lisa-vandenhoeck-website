@@ -25,7 +25,12 @@ export const resource = defineType({
       group: 'content',
       description: 'URL: /ressourcen/<slug>/',
       options: {source: 'title', slugify},
-      validation: (rule) => rule.required(),
+      validation: (rule) =>
+        rule
+          .required()
+          .custom((slug) =>
+            slug?.current === 'design-system' ? 'Reserviert für den Design-System-Bereich.' : true,
+          ),
     }),
     defineField({
       name: 'publishedAt',

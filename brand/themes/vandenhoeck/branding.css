@@ -131,6 +131,7 @@
   --size-control-l: 48px; /** Control-Höhe gross. */
   --size-button-m: 48px; /** Button-Höhe M – hervorgehobene Buttons, z. B. Hero-CTA. */
   --size-button-l: 56px; /** Button-Höhe L – Ausnahme: prominenter Button allein in einer Section (Landingpage). */
+  --size-listbox-max: 300px; /** Maximale Höhe der Listbox einer Combobox, danach scrollt sie (Select: bis 7 Optionen). */
   --size-icon-s: 16px; /** Icon neben Body-Text (body.s/label). */
   --size-icon-m: 20px; /** Icon neben Body-Text (body.m). */
   --size-icon-l: 24px; /** Icon in grossen Containern (Avatar-lg, Hero). */
@@ -165,7 +166,7 @@
   --opacity-disabled: 0.5; /** Opacity für deaktivierte interaktive Elemente. */
   --offset-icon-text: 2px; /** Optischer Versatz: Icon top-align mit der ersten Textzeile (line-height-Ausgleich). */
   --elevation-s: 0px 0px 4px 0px #00000018; /** Gleichmäßiger Halo (Licht von oben). Dark Mode: Schatten tragen schlecht. */
-  --elevation-m: 0px 4px 8px 0px #00000026; /** Elevation mittel. Karten, Dropdowns. */
+  --elevation-m: 0px 4px 8px 0px #00000026; /** Elevation mittel. Karten, Listboxen. */
   --elevation-l: 0px 8px 24px 0px #0000002e; /** Elevation gross. Modals, Flyouts. */
   --color-text-default: var(--color-neutral-dark-900); /** Standard-Textfarbe / Ink. Hell-Modus. */
   --color-text-muted: var(--color-neutral-dark-500); /** Gedämpfter Text (Slate). Hell-Modus. */
@@ -177,7 +178,7 @@
   --color-action-primary-active: var(--color-accent1-800); /** Vandenhoeck: eine Stufe unter Hover, damit Active unterscheidbar bleibt. */
   --color-border-default: var(--color-neutral-light-200); /** Standard-Rahmen (Hairline). Hell-Modus. */
   --color-border-strong: var(--color-neutral-light-300); /** Stärkerer Rahmen. */
-  --color-border-input: var(--color-neutral-dark-400); /** Rahmen von Eingabefeldern (Input, Dropdown, Combobox). Mind. 3:1 auf allen hellen Flächen (bg.default, bg.variant, surface.*), WCAG 1.4.11. Nicht für Cards/Trennlinien – dort border.default. */
+  --color-border-input: var(--color-neutral-dark-400); /** Rahmen von Eingabefeldern (Input, Select, Combobox). Mind. 3:1 auf allen hellen Flächen (bg.default, bg.variant, surface.*), WCAG 1.4.11. Nicht für Cards/Trennlinien – dort border.default. */
   --color-border-focus: var(--color-accent2-600); /** Fokus-Ring (Sky). */
   --color-border-accent1: var(--color-accent1-600); /** Vandenhoeck: Coral = 600 (#d2461e, barrierefrei). */
   --color-border-accent2: var(--color-accent2-600); /** Sky-Border (Secondary-Control, KI-NATIV). */

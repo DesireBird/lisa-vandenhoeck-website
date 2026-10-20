@@ -5,7 +5,9 @@
 export const dsComponents = [
   {title: 'Button', value: 'button'},
   {title: 'Form Field', value: 'formfield'},
-  {title: 'Dropdown', value: 'dropdown'},
+  {title: 'Select', value: 'select'},
+  {title: 'Combobox', value: 'combobox'},
+  {title: 'List Box Item', value: 'listboxitem'},
   {title: 'Selection Control', value: 'selection'},
   {title: 'Toggle', value: 'toggle'},
   {title: 'Segmented', value: 'segmented'},

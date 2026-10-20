@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 
 // Seiteneinstellungen gibt es genau einmal: nicht neu anlegen, nicht löschen oder duplizieren.
-const SINGLETONS = new Set(['siteSettings'])
+const SINGLETONS = new Set(['siteSettings', 'designSystem'])
 const SINGLETON_ACTIONS = new Set(['publish', 'discardChanges', 'restore'])
 
 export default defineConfig({

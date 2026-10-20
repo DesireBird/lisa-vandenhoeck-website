@@ -90,7 +90,36 @@ export default function DatenschutzPage() {
               </a>
             </p>
             <p>
-              <strong>4. Link zu Calendly</strong>
+              <strong>4. Bilder über das Sanity-CDN</strong>
+            </p>
+            <p>
+              Die Inhalte dieser Website pflegen wir im Redaktionssystem Sanity (Sanity AS,
+              Norwegen, und Sanity US Inc., USA). Texte sind fest in die Seiten eingebaut. Bilder
+              lädt Ihr Browser jedoch direkt vom Bildserver <code>cdn.sanity.io</code>, damit sie in
+              passender Größe und in einem modernen Format ausgeliefert werden. Dabei erhält Sanity
+              Ihre IP-Adresse, Datum und Uhrzeit, die Adresse des Bildes sowie Browser und
+              Betriebssystem (User-Agent).
+            </p>
+            <p>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in
+              einer schnellen Auslieferung optimierter Bilder. Sanity löscht oder anonymisiert
+              Logdaten nach eigenen Angaben innerhalb von 90 Tagen. Dabei kann eine Verarbeitung in
+              den USA stattfinden; die Übermittlung stützt sich auf Standardvertragsklauseln der
+              EU-Kommission (Art. 46 DSGVO). Mit Sanity besteht ein Vertrag zur
+              Auftragsverarbeitung.
+            </p>
+            <p>
+              Weitere Informationen finden Sie in der Datenschutzerklärung von Sanity:{" "}
+              <a
+                href="https://www.sanity.io/legal/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                sanity.io/legal/privacy
+              </a>
+            </p>
+            <p>
+              <strong>5. Link zu Calendly</strong>
             </p>
             <p>
               Auf dieser Website befindet sich ein Link zur Terminbuchung (&quot;Kennenlern-Gespräch
@@ -116,7 +145,7 @@ export default function DatenschutzPage() {
               </a>
             </p>
             <p>
-              <strong>5. Ihre Rechte als betroffene Person</strong>
+              <strong>6. Ihre Rechte als betroffene Person</strong>
             </p>
             <p>
               Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
@@ -143,10 +172,10 @@ export default function DatenschutzPage() {
               Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.
             </p>
             <p>
-              <strong>6. Aktualität und Änderung dieser Datenschutzerklärung</strong>
+              <strong>7. Aktualität und Änderung dieser Datenschutzerklärung</strong>
             </p>
             <p>
-              Diese Datenschutzerklärung ist aktuell gültig (Stand: Juli 2026). Durch die
+              Diese Datenschutzerklärung ist aktuell gültig (Stand: Oktober 2026). Durch die
               Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher bzw.
               behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.
             </p>

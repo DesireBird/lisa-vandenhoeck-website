@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { getSettings } from "@/lib/settings";
 
 export const metadata: Metadata = {
   title: "About",
   alternates: { canonical: "/about/" },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const { bookingUrl } = await getSettings();
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────── */}
@@ -204,7 +206,7 @@ export default function AboutPage() {
         <div className="container">
           <h2 className="section__heading">Sollen wir loslegen?</h2>
           <a
-            href="https://calendly.com/lisa-vandenhoeck/30min"
+            href={bookingUrl}
             className="btn btn--primary"
             target="_blank"
             rel="noopener noreferrer"

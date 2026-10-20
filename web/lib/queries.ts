@@ -73,7 +73,10 @@ export const dsComponentDocsQuery = defineQuery(`
 `);
 
 export const dsComponentDocQuery = defineQuery(`
-  *[_type == "dsComponent" && component == $component][0] { component, summary, usage, dos, donts, notes }
+  *[_type == "dsComponent" && component == $component][0] {
+    component, summary, notes, docsMarkdown, docsMeta,
+    examples[] { _key, title, kind, image ${image}, html, text, links[] { _key, label, url } }
+  }
 `);
 
 const patternCard = /* groq */ `{ _id, title, "slug": slug.current, summary }`;

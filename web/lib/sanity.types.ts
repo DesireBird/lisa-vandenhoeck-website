@@ -174,10 +174,32 @@ export type DsComponent = {
     | "header"
     | "sidebar";
   summary?: string;
-  usage?: BlockContent;
-  dos?: Array<string>;
-  donts?: Array<string>;
   notes?: BlockContent;
+  examples?: Array<{
+    title: string;
+    kind: "image" | "html";
+    image?: AccessibleImage;
+    html?: string;
+    text?: SimpleText;
+    links?: Array<{
+      label: string;
+      url: string;
+      _type: "exampleLink";
+      _key: string;
+    }>;
+    _type: "dsExample";
+    _key: string;
+  }>;
+  docsMarkdown?: string;
+  docsMeta?: {
+    title?: string;
+    status?: string;
+    version?: string;
+    updated?: string;
+    path?: string;
+    commit?: string;
+    syncedAt?: string;
+  };
 };
 
 export type DesignSystem = {
@@ -697,7 +719,7 @@ export type DsComponentDocsQueryResult = Array<{
 
 // Source: ../web/lib/queries.ts
 // Variable: dsComponentDocQuery
-// Query: *[_type == "dsComponent" && component == $component][0] { component, summary, usage, dos, donts, notes }
+// Query: *[_type == "dsComponent" && component == $component][0] {    component, summary, notes, docsMarkdown, docsMeta,    examples[] { _key, title, kind, image { asset, alt, hotspot, crop }, html, text, links[] { _key, label, url } }  }
 export type DsComponentDocQueryResult = {
   component:
     | "accordion"
@@ -721,10 +743,35 @@ export type DsComponentDocQueryResult = {
     | "sidebar"
     | "toggle";
   summary: string | null;
-  usage: BlockContent | null;
-  dos: Array<string> | null;
-  donts: Array<string> | null;
   notes: BlockContent | null;
+  docsMarkdown: string | null;
+  docsMeta: {
+    title?: string;
+    status?: string;
+    version?: string;
+    updated?: string;
+    path?: string;
+    commit?: string;
+    syncedAt?: string;
+  } | null;
+  examples: Array<{
+    _key: string;
+    title: string;
+    kind: "html" | "image";
+    image: {
+      asset: SanityImageAssetReference | null;
+      alt: string | null;
+      hotspot: SanityImageHotspot | null;
+      crop: SanityImageCrop | null;
+    } | null;
+    html: string | null;
+    text: SimpleText | null;
+    links: Array<{
+      _key: string;
+      label: string;
+      url: string;
+    }> | null;
+  }> | null;
 } | null;
 
 // Source: ../web/lib/queries.ts
@@ -781,7 +828,7 @@ declare global {
     '\n  *[_type == "resource" && slug.current == $slug][0] {\n    _id, title, "slug": slug.current, teaser, publishedAt, cover { asset, alt, hotspot, crop }, body,\n    "fileUrl": file.asset->url, externalUrl, linkLabel, seo { title, description, ogImage { asset, alt, hotspot, crop } }\n  }\n': ResourceBySlugQueryResult;
     '\n  *[_type == "designSystem" && _id == "designSystem"][0] {\n    title, teaser, cover { asset, alt, hotspot, crop }, intro, foundationIntro, componentsIntro, patternsIntro, seo { title, description, ogImage { asset, alt, hotspot, crop } }\n  }\n': DesignSystemQueryResult;
     '\n  *[_type == "dsComponent" && defined(component)] { component, summary }\n': DsComponentDocsQueryResult;
-    '\n  *[_type == "dsComponent" && component == $component][0] { component, summary, usage, dos, donts, notes }\n': DsComponentDocQueryResult;
+    '\n  *[_type == "dsComponent" && component == $component][0] {\n    component, summary, notes, docsMarkdown, docsMeta,\n    examples[] { _key, title, kind, image { asset, alt, hotspot, crop }, html, text, links[] { _key, label, url } }\n  }\n': DsComponentDocQueryResult;
     '\n  *[_type == "dsPattern" && defined(slug.current)] | order(order asc, title asc) { _id, title, "slug": slug.current, summary }\n': DsPatternsQueryResult;
     '\n  *[_type == "dsPattern" && slug.current == $slug][0] {\n    _id, title, "slug": slug.current, summary, body, components\n  }\n': DsPatternBySlugQueryResult;
   }

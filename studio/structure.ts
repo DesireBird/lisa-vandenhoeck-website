@@ -24,7 +24,7 @@ export const structure: StructureResolver = (S) =>
         .child(
           S.document().schemaType('designSystem').documentId('designSystem').title('Design System'),
         ),
-      S.documentTypeListItem('dsComponent').title('Component-Doku'),
+      S.documentTypeListItem('dsComponent').title('Components'),
       S.documentTypeListItem('dsPattern').title('Patterns'),
       S.divider(),
       S.documentTypeListItem('page').title('Seiten'),

@@ -1,6 +1,6 @@
 # Sanity Studio – vandenhoeck.de
 
-Projekt `4y4m7dt1`, Dataset `production` (öffentlich). Gehostet auf https://vandenhoeck.sanity.studio.
+Projekt `o18b50z8`, Dataset `production` (öffentlich). Gehostet auf https://vandenhoeck.sanity.studio.
 
 - `npm run dev` – Studio lokal (http://localhost:3333)
 - `npm run deploy` – Studio veröffentlichen

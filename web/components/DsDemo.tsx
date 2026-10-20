@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { initListboxes } from "../../brand/design-system/src/scripts/listbox.js";
 
 /*
  * Live-Beispiel einer Component aus brand/design-system/preview.html.
  * Einfache Interaktionen (Chips, Accordion, Mehrfachauswahl) stecken als onclick im HTML.
- * Dropdown und Carousel brauchen das Verhalten aus dem Skript von preview.html – hier portiert.
+ * Select/Combobox nutzen src/scripts/listbox.js aus dem Design System; das Carousel-Verhalten
+ * ist aus dem Skript von preview.html portiert.
  */
 export function DsDemo({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,89 +41,8 @@ export function DsDemo({ html }: { html: string }) {
       );
     });
 
-    // Dropdown / Select / Combobox
-    root.querySelectorAll<HTMLElement>(".dropdown").forEach((wrapper) => {
-      const isCombobox = wrapper.classList.contains("dropdown--combobox");
-      const trigger = wrapper.querySelector<HTMLElement>(".dropdown__trigger");
-      const input = wrapper.querySelector<HTMLInputElement>(".dropdown__input");
-      const list = wrapper.querySelector<HTMLElement>(".dropdown__list");
-      if (!list) return;
-      const options = Array.from(list.querySelectorAll<HTMLElement>(".dropdown__option"));
-      const control = isCombobox ? input : trigger;
-      const placeholder = trigger?.dataset.placeholder ?? "";
-
-      if (trigger) {
-        trigger.textContent = placeholder;
-        trigger.classList.toggle("is-placeholder-shown", !!placeholder);
-      }
-      const open = () => {
-        wrapper.classList.add("is-expanded");
-        control?.setAttribute("aria-expanded", "true");
-      };
-      const close = () => {
-        wrapper.classList.remove("is-expanded");
-        control?.setAttribute("aria-expanded", "false");
-      };
-      const filterOptions = (query: string) => {
-        const q = query.trim().toLowerCase();
-        let anyVisible = false;
-        options.forEach((opt) => {
-          const visible =
-            opt.classList.contains("dropdown__option--none") ||
-            (opt.textContent ?? "").trim().toLowerCase().includes(q);
-          opt.style.display = visible ? "" : "none";
-          if (visible) anyVisible = true;
-        });
-        let empty = list.querySelector<HTMLElement>(".dropdown__empty");
-        if (!anyVisible) {
-          if (!empty) {
-            empty = document.createElement("li");
-            empty.className = "dropdown__empty";
-            empty.textContent = "Keine Ergebnisse";
-            list.appendChild(empty);
-          }
-          empty.style.display = "";
-        } else if (empty) {
-          empty.style.display = "none";
-        }
-      };
-      const select = (opt: HTMLElement) => {
-        options.forEach((o) => o.setAttribute("aria-selected", "false"));
-        opt.setAttribute("aria-selected", "true");
-        const isNone = opt.classList.contains("dropdown__option--none");
-        if (trigger) {
-          trigger.textContent = (opt.textContent ?? "").trim();
-          trigger.classList.toggle("is-placeholder-shown", isNone);
-        }
-        if (input) {
-          input.value = isNone ? "" : (opt.textContent ?? "").trim();
-          filterOptions("");
-        }
-        close();
-      };
-
-      if (trigger)
-        on(trigger, "click", () => (wrapper.classList.contains("is-expanded") ? close() : open()));
-      if (input) {
-        on(input, "focus", open);
-        on(input, "input", () => {
-          filterOptions(input.value);
-          open();
-        });
-      }
-      options.forEach((opt) =>
-        on(opt, "mousedown", (e) => {
-          e.preventDefault();
-          select(opt);
-        }),
-      );
-      on(document, "click", (e) => {
-        if (!wrapper.contains(e.target as Node)) close();
-      });
-      on(document, "keydown", (e) => {
-        if (e.key === "Escape" && wrapper.classList.contains("is-expanded")) close();
-      });
-    });
+    // Select, Combobox (+ List Box Items): Verhalten aus dem Design System, eine Quelle
+    cleanups.push(initListboxes(root));
 
     return () => cleanups.forEach((fn) => fn());
   }, [html]);

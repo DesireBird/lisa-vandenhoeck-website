@@ -12,6 +12,11 @@
   padding: 0;
 }
 
+/* Überscrollen (Gummiband) zeigt oben die Seitenfarbe, unten die Footer-Farbe */
+html {
+  background: linear-gradient(var(--color-bg-default) 50%, var(--color-bg-inverse) 50%);
+}
+
 body {
   font: var(--text-style-body-m);
   font-weight: var(--weight-regular);
@@ -19,6 +24,15 @@ body {
   background-color: var(--color-bg-default);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* Footer immer am unteren Rand, auch bei kurzen Seiten */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body > main {
+  flex: 1 0 auto;
 }
 
 a {
@@ -852,7 +866,7 @@ img {
 
 /* ── Footer ───────────────────────────────────────────────── */
 .site-footer {
-  background-color: var(--color-neutral-dark-900);
+  background-color: var(--color-bg-inverse);
   padding: var(--space-layout-m) 0;
 }
 

@@ -270,6 +270,14 @@
   font: var(--text-style-body-s);
 }
 
+/* Mobil: breite Tabellen scrollen in sich, statt die Seite zu verbreitern */
+@media (max-width: 768px) {
+  .ds-markdown table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
 .ds-markdown th,
 .ds-markdown td {
   padding: var(--space-gap-s) var(--space-gap-m);

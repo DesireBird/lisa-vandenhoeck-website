@@ -39,10 +39,12 @@ export default function DatenschutzPage() {
             <p>
               Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies
               zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen
-              erforderlich ist. Diese Website verwendet keine Cookies, keine Analyse- oder
-              Tracking-Tools (z. B. Google Analytics, Meta-Pixel o. Ä.) und keine Formulare, über
-              die personenbezogene Daten erhoben werden. Es findet keine Speicherung von Daten über{" "}
-              <code>localStorage</code> oder <code>sessionStorage</code> statt.
+              erforderlich ist. Diese Website verwendet keine Formulare, über die personenbezogene
+              Daten erhoben werden, und keine Werbe- oder Social-Media-Tracker (z. B. Google
+              Analytics, Meta-Pixel o. Ä.). Cookies setzt nur das Statistik-Tool Matomo, und nur
+              wenn Sie dem zugestimmt haben (siehe Abschnitt 5). Ihre Entscheidung im
+              Einwilligungsbanner speichern wir im <code>localStorage</code> Ihres Browsers, damit
+              der Banner nicht bei jedem Aufruf erscheint.
             </p>
             <p>
               Die auf dieser Website verwendeten Schriftarten (Unbounded, Plus Jakarta Sans) sind
@@ -118,8 +120,41 @@ export default function DatenschutzPage() {
                 sanity.io/legal/privacy
               </a>
             </p>
+            <p id="statistik">
+              <strong>5. Statistik mit Matomo (nur mit Ihrer Einwilligung)</strong>
+            </p>
             <p>
-              <strong>5. Link zu Calendly</strong>
+              Wenn Sie im Banner „Zustimmen“ wählen, nutzen wir Matomo Cloud, um zu verstehen, wie
+              diese Website genutzt wird. Anbieter ist InnoCraft Ltd., 7 Waterloo Quay PO625, 6140
+              Wellington, Neuseeland. Die Daten werden auf Servern in der EU gespeichert. Für
+              Neuseeland besteht ein Angemessenheitsbeschluss der EU-Kommission; mit InnoCraft
+              besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).
+            </p>
+            <p>Dabei werden folgende Daten verarbeitet:</p>
+            <ul className="bullet-list">
+              <li>aufgerufene Seiten, Verweildauer und Reihenfolge der Seitenaufrufe</li>
+              <li>
+                Klicks in der Navigation, auf Links zu anderen Websites und auf Funktionen wie
+                „Copy Spec as MD“
+              </li>
+              <li>verweisende Website, Browser, Betriebssystem, Bildschirmgröße, Sprache</li>
+              <li>Ihre IP-Adresse, die vor der Speicherung gekürzt wird (anonymisiert)</li>
+            </ul>
+            <p>
+              Matomo setzt dafür die Cookies <code>_pk_id</code> (Wiedererkennung, 13 Monate) und{" "}
+              <code>_pk_ses</code> (Sitzung, 30 Minuten). Rechtsgrundlage ist Ihre Einwilligung
+              (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Ohne Zustimmung wird Matomo nicht
+              geladen. Sie können Ihre Einwilligung jederzeit über „Statistik-Einstellungen“ im
+              Footer widerrufen; die Matomo-Cookies werden dabei gelöscht.
+            </p>
+            <p>
+              Weitere Informationen:{" "}
+              <a href="https://matomo.org/privacy-policy/" target="_blank" rel="noopener noreferrer">
+                matomo.org/privacy-policy
+              </a>
+            </p>
+            <p>
+              <strong>6. Link zu Calendly</strong>
             </p>
             <p>
               Auf dieser Website befindet sich ein Link zur Terminbuchung (&quot;Kennenlern-Gespräch
@@ -145,7 +180,7 @@ export default function DatenschutzPage() {
               </a>
             </p>
             <p>
-              <strong>6. Ihre Rechte als betroffene Person</strong>
+              <strong>7. Ihre Rechte als betroffene Person</strong>
             </p>
             <p>
               Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
@@ -172,7 +207,7 @@ export default function DatenschutzPage() {
               Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.
             </p>
             <p>
-              <strong>7. Aktualität und Änderung dieser Datenschutzerklärung</strong>
+              <strong>8. Aktualität und Änderung dieser Datenschutzerklärung</strong>
             </p>
             <p>
               Diese Datenschutzerklärung ist aktuell gültig (Stand: Oktober 2026). Durch die

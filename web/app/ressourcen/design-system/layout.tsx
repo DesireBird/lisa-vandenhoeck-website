@@ -20,6 +20,7 @@ import "../../../../brand/design-system/src/components/SectionDivider.css";
 import "../../../../brand/design-system/src/components/Sidebar.css";
 import "../../../../brand/design-system/src/components/Segmented.css";
 import "../../../../brand/design-system/src/components/Toggle.css";
+import "../../../../brand/design-system/src/docs/Playground.css";
 import "./ds.css";
 
 // Icons wie in brand/design-system/preview.html

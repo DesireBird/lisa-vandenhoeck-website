@@ -344,3 +344,8 @@
 .ds-chip-links .chip {
   text-decoration: none;
 }
+
+/* Übersicht: Foundation, Components, Patterns als Cards */
+.ds-overview-grid {
+  margin-top: var(--space-layout-s);
+}

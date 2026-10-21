@@ -6,7 +6,7 @@ const fallback = {
   heroHeadline:
     "Die Anforderungen an euer Design System verändern sich schneller, als ihr mitkommt?",
   heroSub:
-    "Ich mache eine Sache: Designsystem-Klarheit. Ein Deep-Dive, an eurem eigenen System. Damit euer System wieder die Tools beherrscht und nicht umgekehrt.",
+    "Ich mache eine Sache: Designsystem-Klarheit. Ein Workshop, an eurem eigenen System. Damit euer System wieder die Tools beherrscht und nicht umgekehrt.",
   bookingUrl: "https://calendly.com/lisa-vandenhoeck/30min",
   seoTitle: "Lisa Vandenhoeck — Designsystem-Klarheit",
 };

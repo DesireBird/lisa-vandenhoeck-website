@@ -41,7 +41,7 @@ export function SiteHeader() {
     <header className="site-nav">
       <div className="container">
         <Link href="/" className="site-nav__logo">
-          Vandenhoeck Deepdives
+          Vandenhoeck UX
         </Link>
         <button
           type="button"

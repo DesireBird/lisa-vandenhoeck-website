@@ -43,7 +43,7 @@
   display: inline-block;
   margin-top: calc((var(--space-layout-l) - var(--space-layout-s)) * -1);
   margin-bottom: var(--space-gap-l);
-  font: var(--text-style-label);
+  font: var(--text-style-caption-meta);
   color: var(--color-text-muted);
   text-decoration: none;
 }
@@ -53,7 +53,7 @@
 }
 
 .ds-card__meta {
-  font: var(--text-style-caption-meta);
+  font: var(--text-style-label);
   font-weight: var(--weight-medium);
   letter-spacing: var(--letter-spacing-caps);
   text-transform: uppercase;
@@ -62,7 +62,8 @@
 
 .ds-note {
   padding: var(--space-inset-m);
-  border: 1px dashed var(--color-border-default);
+  /* border.contrast: gestrichelte Linie bleibt auf Grau und Weiß mit mind. 3:1 erkennbar */
+  border: 1px dashed var(--color-border-contrast);
   border-radius: var(--radius-surface-m);
   font: var(--text-style-body-m);
   color: var(--color-text-muted);
@@ -204,6 +205,14 @@
   margin: 0 0 var(--space-gap-m) 0;
 }
 
+/* Normale Überschrift einer Demo-Gruppe (keine Versalien-Eyebrow), z. B. „Checkbox“ */
+.ds-demo .demo-heading {
+  margin: 0 0 var(--space-gap-m);
+  font: var(--text-style-title-s);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-default);
+}
+
 .ds-demo .row {
   display: flex;
   align-items: center;
@@ -232,7 +241,7 @@
 
 /* ── Component-Doku aus dem DS-Repo (Markdown) ── */
 .ds-markdown h2 {
-  margin: var(--space-layout-s) 0 var(--space-gap-m);
+  margin: var(--space-layout-s) 0 var(--space-gap-xl);
   font: var(--text-style-title-m);
   font-weight: var(--weight-bold);
   color: var(--color-text-default);
@@ -275,14 +284,15 @@
   color: var(--color-text-accent2);
 }
 
-/* Nummerierte und Aufzählungslisten eingerückt (Nummer/Punkt innerhalb der Textspalte) */
+/* Listen linksbündig mit Überschriften und Absätzen; Nummern stehen in der Textspalte */
 .ds-markdown ol,
 .ds-markdown ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-gap-s);
   margin: 0;
-  padding-left: var(--space-layout-s);
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 .ds-markdown li::marker {

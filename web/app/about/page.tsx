@@ -45,8 +45,8 @@ export default async function AboutPage() {
               ein Design System haben, aber Probleme haben zu skalieren.
             </p>
             <p>
-              Ich mache genau eine Sache: Design-System-Klarheit. Ein Deep Dive, ein konkretes
-              Thema, direkt an eurem eigenen System. Mein persönliches Ziel: Nach diesem Deep Dive
+              Ich mache genau eine Sache: Design-System-Klarheit. Ein Workshop, ein konkretes
+              Thema, direkt an eurem eigenen System. Mein persönliches Ziel: Nach diesem Workshop
               bin ich für euch überflüssig.
             </p>
             <p>

@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: settings.seoDescription ?? undefined,
     openGraph: {
-      siteName: "Vandenhoeck Deepdives",
+      siteName: "Vandenhoeck UX",
       locale: "de_DE",
       type: "website",
       ...(ogImage ? { images: [{ url: ogImage, width: 1200, height: 630 }] } : {}),

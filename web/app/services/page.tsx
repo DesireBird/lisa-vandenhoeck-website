@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Deep-Dives",
+  title: "Workshops",
   alternates: { canonical: "/services/" },
 };
 
@@ -19,7 +19,7 @@ export default function ServicesPage() {
             marginBottom: "var(--space-layout-l)",
           }}
         >
-          <span className="flag flag--neutral">Deep-Dives</span>
+          <span className="flag flag--neutral">Workshops</span>
           <h1 className="narrative__heading" style={{ marginTop: "var(--space-gap-m)" }}>
             Diese Seite ist noch im Aufbau
           </h1>

@@ -255,6 +255,11 @@
   font-weight: var(--weight-bold);
 }
 
+/* Sprungziele (#anker) nicht unter dem sticky Header verstecken */
+.ds-markdown :is(h2, h3, h4) {
+  scroll-margin-top: calc(var(--ds-header-offset, 0px) + var(--space-gap-l));
+}
+
 .ds-markdown code {
   padding: 0 var(--space-gap-s);
   border-radius: var(--radius-control-s);
@@ -268,6 +273,14 @@
   /* Abstand kommt nur vom gap des Containers, wie bei Absätzen und Listen */
   margin: 0;
   font: var(--text-style-body-s);
+}
+
+/* Mobil: breite Tabellen scrollen in sich, statt die Seite zu verbreitern */
+@media (max-width: 768px) {
+  .ds-markdown table {
+    display: block;
+    overflow-x: auto;
+  }
 }
 
 .ds-markdown th,

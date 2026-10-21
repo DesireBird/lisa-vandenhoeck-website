@@ -25,7 +25,7 @@ const navAreas: [selector: string, area: string][] = [
  * Zählt Seitenaufrufe (auch bei Navigation ohne Neuladen), Verweildauer (Heartbeat),
  * ausgehende Links und Klicks in Header, Sidebar und Footer.
  */
-export function Analytics({ host, siteId }: { host: string; siteId: string }) {
+export function Analytics({ url, siteId }: { url: string; siteId: string }) {
   const pathname = usePathname();
   const [consent, setConsent] = useState<Consent | null | undefined>(undefined);
   const started = useRef(false);
@@ -45,15 +45,15 @@ export function Analytics({ host, siteId }: { host: string; siteId: string }) {
     if (consent !== "granted" || started.current) return;
     started.current = true;
     const paq = (window._paq = window._paq ?? []);
-    paq.push(["setTrackerUrl", `https://${host}/matomo.php`]);
+    paq.push(["setTrackerUrl", `${url}matomo.php`]);
     paq.push(["setSiteId", siteId]);
     paq.push(["enableLinkTracking"]);
     paq.push(["enableHeartBeatTimer"]);
     const script = document.createElement("script");
     script.async = true;
-    script.src = `https://cdn.matomo.cloud/${host}/matomo.js`;
+    script.src = `${url}matomo.js`;
     document.head.appendChild(script);
-  }, [consent, host, siteId]);
+  }, [consent, url, siteId]);
 
   // Seitenaufruf bei jedem Seitenwechsel
   useEffect(() => {

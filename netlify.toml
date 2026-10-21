@@ -41,4 +41,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "DENY"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.matomo.cloud https://*.matomo.cloud; connect-src 'self' https://*.matomo.cloud; img-src 'self' data: https://cdn.sanity.io https://*.matomo.cloud; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://app.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://stats.vandenhoeck.de; connect-src 'self' https://stats.vandenhoeck.de; img-src 'self' data: https://cdn.sanity.io https://stats.vandenhoeck.de; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://app.netlify.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"

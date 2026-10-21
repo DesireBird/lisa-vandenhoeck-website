@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Statistik nur auf live und nur, wenn Matomo eingetragen ist (lib/site.ts)
-const analyticsEnabled = isProduction && Boolean(matomo.host && matomo.siteId);
+const analyticsEnabled = isProduction && Boolean(matomo.url && matomo.siteId);
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         <main id="inhalt">{children}</main>
         <SiteFooter analytics={analyticsEnabled} />
-        {analyticsEnabled ? <Analytics host={matomo.host} siteId={matomo.siteId} /> : null}
+        {analyticsEnabled ? <Analytics url={matomo.url} siteId={matomo.siteId} /> : null}
       </body>
     </html>
   );

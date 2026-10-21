@@ -9,11 +9,11 @@ export const isProduction = process.env.SITE_ENV === "production";
 export const siteUrl = process.env.SITE_URL || "https://vandenhoeck.de";
 
 /**
- * Matomo Cloud. Tracking läuft nur auf live (isProduction) und erst nach Zustimmung im Banner.
- * Host ohne Protokoll, z. B. "vandenhoeck.matomo.cloud". Leer → kein Banner, kein Tracking.
- * Bei Änderung auch die CSP in netlify.toml anpassen (script-src, connect-src, img-src).
+ * Matomo, selbst gehostet bei All-Inkl. Tracking läuft nur auf live (isProduction) und erst
+ * nach Zustimmung im Banner. siteId leer → kein Banner, kein Tracking.
+ * Bei Änderung der Adresse auch die CSP in netlify.toml anpassen (script-src, connect-src, img-src).
  */
 export const matomo = {
-  host: "",
+  url: "https://stats.vandenhoeck.de/",
   siteId: "",
 };

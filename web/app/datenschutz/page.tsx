@@ -124,11 +124,12 @@ export default function DatenschutzPage() {
               <strong>5. Statistik mit Matomo (nur mit Ihrer Einwilligung)</strong>
             </p>
             <p>
-              Wenn Sie im Banner „Zustimmen“ wählen, nutzen wir Matomo Cloud, um zu verstehen, wie
-              diese Website genutzt wird. Anbieter ist InnoCraft Ltd., 7 Waterloo Quay PO625, 6140
-              Wellington, Neuseeland. Die Daten werden auf Servern in der EU gespeichert. Für
-              Neuseeland besteht ein Angemessenheitsbeschluss der EU-Kommission; mit InnoCraft
-              besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).
+              Wenn Sie im Banner „Zustimmen“ wählen, nutzen wir die Open-Source-Software Matomo, um
+              zu verstehen, wie diese Website genutzt wird. Matomo betreiben wir selbst unter{" "}
+              <code>stats.vandenhoeck.de</code> auf einem Server unseres Hosters ALL-INKL.COM – Neue
+              Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland. Die Daten bleiben
+              auf diesem Server in Deutschland und werden nicht an Dritte weitergegeben. Mit
+              ALL-INKL.COM besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).
             </p>
             <p>Dabei werden folgende Daten verarbeitet:</p>
             <ul className="bullet-list">
@@ -148,9 +149,9 @@ export default function DatenschutzPage() {
               Footer widerrufen; die Matomo-Cookies werden dabei gelöscht.
             </p>
             <p>
-              Weitere Informationen:{" "}
-              <a href="https://matomo.org/privacy-policy/" target="_blank" rel="noopener noreferrer">
-                matomo.org/privacy-policy
+              Weitere Informationen zu Matomo:{" "}
+              <a href="https://matomo.org/privacy/" target="_blank" rel="noopener noreferrer">
+                matomo.org/privacy
               </a>
             </p>
             <p>

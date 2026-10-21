@@ -251,9 +251,10 @@ img {
 }
 
 /* Große Buttons (DS: M = Hero-CTA, L = allein in einer Section): Höhe und Schrift aus
-   dem Design System, hier nur Website-Layout */
-.button--m,
-.button--l {
+   dem Design System, hier nur Website-Layout. Nicht in den Live-Beispielen der
+   Design-System-Doku (.ds-demo), dort gilt der Button unverändert aus dem DS. */
+.button--m:not(.ds-demo *),
+.button--l:not(.ds-demo *) {
   padding: 0 var(--space-layout-s);
   align-self: flex-start;
 }

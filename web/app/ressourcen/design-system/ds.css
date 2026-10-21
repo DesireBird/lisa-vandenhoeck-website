@@ -2,9 +2,10 @@
 
 /* ── Sidebar aus dem Design System (Sidebar.css) unter dem sticky Website-Header ──
    Sidebar.css geht von einer Seite ohne Kopfzeile aus (top: 0, 100vh). Hier beginnen
-   Leiste, Drawer und mobile Topbar unter .site-nav; --ds-header-offset setzt DsSidebar. */
-.ds-shell .sidebar,
-.ds-shell .sidebar__drawer {
+   Leiste und mobile Topbar unter .site-nav; --ds-header-offset setzt DsSidebar.
+   Die Leiste ist sticky in .app-body und endet mit dem Inhalt vor dem Footer; der Drawer
+   hängt an ihr (Sidebar.css) und läuft deshalb mit. */
+.ds-shell .sidebar {
   top: var(--ds-header-offset, 0px);
   height: calc(100vh - var(--ds-header-offset, 0px));
 }
@@ -272,6 +273,20 @@
 
 .ds-markdown a {
   color: var(--color-text-accent2);
+}
+
+/* Nummerierte und Aufzählungslisten eingerückt (Nummer/Punkt innerhalb der Textspalte) */
+.ds-markdown ol,
+.ds-markdown ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-s);
+  margin: 0;
+  padding-left: var(--space-layout-s);
+}
+
+.ds-markdown li::marker {
+  color: var(--color-text-muted);
 }
 
 /* GFM-Aufgabenlisten (Abschnitt „Offen“) */

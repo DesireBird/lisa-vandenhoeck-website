@@ -410,7 +410,7 @@ export default async function HomePage() {
                   </div>
                   <div className="scroll-card scroll-card--accent" data-index="3">
                     <p className="scroll-card__body scroll-card__body--strong">
-                      Prozess durch einen Deepdive-Booster beschleunigen.
+                      Prozess durch einen Workshop-Booster beschleunigen.
                     </p>
                     <a
                       href={settings.bookingUrl}
@@ -997,7 +997,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-      {/* ── Services / Deep-Dives ──────────────────────────────── */}
+      {/* ── Services / Workshops ──────────────────────────────── */}
       <section className="section section--paper" id="services">
         <div className="container">
           <div className="services-header">
@@ -1005,7 +1005,7 @@ export default async function HomePage() {
               Drei Themen. Ein Anti-Steckenpferd pro Team ↓
             </h2>
             <Link href="/services/" className="button button--secondary">
-              Alle Deep-Dives
+              Alle Workshops
             </Link>
           </div>
           <p className="section__lead" style={{ marginTop: "var(--space-gap-l)" }}>
@@ -1039,7 +1039,7 @@ export default async function HomePage() {
                   Buchen
                 </a>{" "}
                 <Link href="/figma-config/" className="button button--secondary">
-                  Zum Deep-Dive
+                  Zum Workshop
                 </Link>
               </div>
               <div className="service-card__divider" />
@@ -1097,7 +1097,7 @@ export default async function HomePage() {
                   Buchen
                 </a>{" "}
                 <Link href="/ki-ready/" className="button button--secondary">
-                  Zum Deep-Dive
+                  Zum Workshop
                 </Link>
               </div>
               <div className="service-card__divider" />
@@ -1151,7 +1151,7 @@ export default async function HomePage() {
                   Buchen
                 </a>{" "}
                 <Link href="/bfsg/" className="button button--secondary">
-                  Zum Deep-Dive
+                  Zum Workshop
                 </Link>
               </div>
               <div className="service-card__divider" />

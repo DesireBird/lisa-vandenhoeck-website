@@ -24,7 +24,7 @@ const components: PortableTextComponents = {
   },
 };
 
-/** Portable Text aus Sanity (Seiten, Ressourcen, kurze Texte in Deepdives). */
+/** Portable Text aus Sanity (Seiten, Ressourcen, kurze Texte in Workshops). */
 export function RichText({ value }: { value?: BlockContent | SimpleText | null }) {
   if (!value?.length) return null;
   return <PortableText value={value} components={components} />;

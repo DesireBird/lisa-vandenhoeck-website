@@ -214,6 +214,7 @@
   --space-gap-m: var(--space-3); /** Geschwisterabstand mittel. */
   --space-gap-l: var(--space-4); /** Geschwisterabstand gross. */
   --space-gap-xl: var(--space-5); /** Geschwisterabstand extra-gross (24px), eine Leiterstufe über gap.lg. Z. B. Punkte einer Hauptnavigation, Spalten eines Bildrasters. */
+  --space-gap-control: var(--space-2); /** Abstand zwischen Checkbox/Radio und ihrem Label (8px). */
   --space-layout-s: var(--space-6); /** Sektionsabstand klein. */
   --space-layout-m: var(--space-7); /** Sektionsabstand mittel. */
   --space-layout-l: var(--space-9); /** Sektionsabstand gross. */

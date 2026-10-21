@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { ConsentSettingsButton } from "@/components/ConsentSettingsButton";
 
-export function SiteFooter() {
+export function SiteFooter({ analytics = false }: { analytics?: boolean }) {
   return (
     <footer className="site-footer">
       <div className="container">
@@ -17,6 +18,11 @@ export function SiteFooter() {
                 Datenschutz
               </Link>
             </li>
+            {analytics ? (
+              <li>
+                <ConsentSettingsButton />
+              </li>
+            ) : null}
           </ul>
         </nav>
         <p className="site-footer__copy">© 2025 Lisa Vandenhoeck</p>

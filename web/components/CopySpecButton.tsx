@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 /** Kopiert die Spec (Markdown aus dem DS-Repo) in die Zwischenablage. */
-export function CopySpecButton({ markdown }: { markdown: string }) {
+export function CopySpecButton({ markdown, component }: { markdown: string; component: string }) {
   const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
 
   // Fallback für Browser ohne Clipboard-API-Freigabe (z. B. eingebettete Ansichten)
@@ -21,6 +22,7 @@ export function CopySpecButton({ markdown }: { markdown: string }) {
   };
 
   const copy = async () => {
+    trackEvent("Design System", "Copy Spec as MD", component);
     try {
       await navigator.clipboard.writeText(markdown);
       setStatus("copied");

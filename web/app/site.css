@@ -874,6 +874,14 @@ img {
   gap: var(--space-layout-s);
 }
 
+/* Footer-Button sieht aus wie die Footer-Links */
+.site-footer__button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
 .site-footer__link {
   font: var(--text-style-body-s);
   color: var(--color-neutral-dark-400);

@@ -15,5 +15,5 @@ export const siteUrl = process.env.SITE_URL || "https://vandenhoeck.de";
  */
 export const matomo = {
   url: "https://stats.vandenhoeck.de/",
-  siteId: "",
+  siteId: "1",
 };

@@ -240,15 +240,17 @@
 }
 
 /* ── Component-Doku aus dem DS-Repo (Markdown) ── */
+/* Überschrift → Text: nur der gap von .narrative__body (space.gap.l, 16px) wie auf der
+   übrigen Website, kein zusätzlicher Abstand nach unten. Nach oben mehr Luft. */
 .ds-markdown h2 {
-  margin: var(--space-layout-s) 0 var(--space-gap-xl);
+  margin: var(--space-layout-s) 0 0;
   font: var(--text-style-title-m);
   font-weight: var(--weight-bold);
   color: var(--color-text-default);
 }
 
 .ds-markdown h3 {
-  margin: var(--space-gap-l) 0 var(--space-gap-s);
+  margin: var(--space-gap-l) 0 0;
   font: var(--text-style-title-s);
   font-weight: var(--weight-bold);
 }
@@ -263,7 +265,8 @@
 .ds-markdown table {
   width: 100%;
   border-collapse: collapse;
-  margin: var(--space-gap-m) 0;
+  /* Abstand kommt nur vom gap des Containers, wie bei Absätzen und Listen */
+  margin: 0;
   font: var(--text-style-body-s);
 }
 

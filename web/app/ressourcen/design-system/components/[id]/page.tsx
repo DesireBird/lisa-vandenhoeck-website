@@ -58,7 +58,7 @@ export default async function ComponentPage({
           <div className="ds-doc">
             <div className="ds-doc__header">
               <h2 className="ds-doc__heading">Spec</h2>
-              <CopySpecButton markdown={doc.docsMarkdown} />
+              <CopySpecButton markdown={doc.docsMarkdown} component={component.title} />
             </div>
             <div
               className="narrative__body rich-text ds-markdown"

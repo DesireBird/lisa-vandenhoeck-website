@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Analytics } from "@/components/Analytics";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { imageUrlSized } from "@/lib/image";
 import { getSettings } from "@/lib/settings";
-import { isProduction, siteUrl } from "@/lib/site";
+import { isProduction, matomo, siteUrl } from "@/lib/site";
 import "./brand.css";
 import "./site.css";
 
@@ -29,13 +30,17 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+// Statistik nur auf live und nur, wenn Matomo eingetragen ist (lib/site.ts)
+const analyticsEnabled = isProduction && Boolean(matomo.url && matomo.siteId);
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="de" data-theme="vandenhoeck">
       <body>
         <SiteHeader />
         <main id="inhalt">{children}</main>
-        <SiteFooter />
+        <SiteFooter analytics={analyticsEnabled} />
+        {analyticsEnabled ? <Analytics url={matomo.url} siteId={matomo.siteId} /> : null}
       </body>
     </html>
   );

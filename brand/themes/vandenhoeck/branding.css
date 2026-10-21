@@ -111,6 +111,7 @@
   --color-fill-neutral-subtle: rgba(0, 0, 0, 0.04); /** Neutraler State-Layer, HALBTRANSPARENT (keine Ramp-Ref). DARK MODE: rgba(255,255,255,0.06). */
   --color-scrim-start: rgba(0, 0, 0, 0.4); /** Abdunklung über Fotos, Startpunkt eines Verlaufs (40 % Schwarz), damit heller Text darauf lesbar bleibt. HALBTRANSPARENT (keine Ramp-Ref). */
   --color-scrim-end: rgba(0, 0, 0, 0); /** Endpunkt des Scrim-Verlaufs (transparent). */
+  --space-0: 4px; /** Roh-Leiter, kleinste Stufe (z. B. Innenabstand einer Pille). */
   --space-1: 6px; /** Roh-Leiter. */
   --space-2: 8px; /** Roh-Leiter. */
   --space-3: 12px; /** Roh-Leiter. */
@@ -142,6 +143,7 @@
   --size-avatar-l: 64px; /** Avatar gross (Profil-Header). */
   --size-indicator: 2px; /** Dicke des aktiven Tab-Indikators (Unterstrich). */
   --size-check: 18px; /** Seitenlänge Checkbox / Durchmesser Radio. */
+  --size-sidebar-tab: 78px; /** Höhe eines Tabs in der Sidebar-Leiste (Icon + Label-Pille, Innenabstand 16px oben/unten). */
   --size-toggle-height: 20px; /** Toggle-Track-Höhe. */
   --size-toggle-width: 36px; /** Toggle-Track-Breite. */
   --size-dot: 10px; /** Punkt-Indikator (Carousel-Pagination), sichtbare Größe. Trefferfläche: size.dot-target. */
@@ -162,7 +164,7 @@
   --width-prose: 65ch; /** Lesebreite. */
   --width-content: 1024px; /** Inhaltsbereich. */
   --width-page: 1280px; /** Seitenbegrenzung. */
-  --width-sidebar: 96px; /** Schmale Sidebar-Leiste (Icon oben, Label darunter, quadratische Items). */
+  --width-sidebar: 100px; /** Schmale Sidebar-Leiste (Icon oben, Label darunter). */
   --width-sidebar-drawer: 224px; /** Overlay-Drawer der Sidebar (Level 2 + Level 3). */
   --width-reading: 900px; /** Lesebreite für Doku-Inhalte (Design-System-Bereich): angenehme Zeilenlänge neben der Sidebar. */
   --opacity-disabled: 0.5; /** Opacity für deaktivierte interaktive Elemente. */
@@ -205,6 +207,7 @@
   --color-positive-surface: var(--color-green-100); /** Success-Fläche. */
   --color-positive-on-surface: var(--color-green-800); /** Text auf Success-Fläche. */
   --color-positive-border: var(--color-green-300); /** Rand der Success-Fläche. */
+  --space-inset-xs: var(--space-0); /** Innenabstand sehr klein (4px), z. B. vertikal in der Sidebar-Pille. */
   --space-inset-s: var(--space-2); /** Innenabstand klein. */
   --space-inset-m: var(--space-4); /** Innenabstand mittel. */
   --space-inset-l: var(--space-5); /** Innenabstand gross. */

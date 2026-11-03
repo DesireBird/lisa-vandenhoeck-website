@@ -195,16 +195,18 @@ export default function DatenschutzPage() {
               Beim Absenden des Formulars werden die Daten direkt von Ihrem Browser an unseren
               Dienstleister Brevo übertragen (<code>sibforms.com</code>). Brevo erhält dabei auch
               Ihre IP-Adresse. Anbieter ist die Brevo GmbH, Köpenicker Str. 126, 10179 Berlin,
-              Deutschland. Brevo verarbeitet die Daten in unserem Auftrag, wir haben dazu einen
-              Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO) geschlossen. Dabei kann eine
-              Übermittlung in Länder außerhalb der EU stattfinden; sie stützt sich auf einen
-              Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy Framework) oder auf
-              Standardvertragsklauseln (Art. 46 DSGVO).
+              Deutschland. Brevo verarbeitet die Daten in unserem Auftrag. Der Vertrag zur
+              Auftragsverarbeitung (Art. 28 DSGVO) ist Bestandteil der Nutzungsbedingungen von
+              Brevo. Dabei kann eine Übermittlung in Länder außerhalb der EU stattfinden; sie stützt
+              sich auf einen Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy
+              Framework) oder auf Standardvertragsklauseln (Art. 46 DSGVO).
             </p>
             <p>
-              Die Newsletter-Versendung wird statistisch ausgewertet: Brevo erfasst, ob und wann
-              eine E-Mail geöffnet und welche Links angeklickt werden. Wir nutzen das, um unsere
-              Inhalte zu verbessern.
+              Die Newsletter-Versendung wird statistisch ausgewertet: Brevo zählt, wie oft eine
+              E-Mail geöffnet und wie oft Links angeklickt werden. Dafür nutzen wir die Funktion
+              „Anonymes E-Mail-Tracking“. Öffnungen und Klicks werden dabei nicht einzelnen Personen
+              zugeordnet, Angaben wie E-Mail- und IP-Adresse werden anonymisiert. Wir sehen nur die
+              Gesamtwerte und nutzen sie, um unsere Inhalte zu verbessern.
             </p>
             <p>
               Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 7 Abs. 2 Nr. 3

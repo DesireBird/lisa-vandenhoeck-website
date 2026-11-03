@@ -9,6 +9,11 @@ export function SiteFooter({ analytics = false }: { analytics?: boolean }) {
         <nav aria-label="Footer Navigation">
           <ul className="site-footer__list">
             <li>
+              <Link href="/newsletter/" className="site-footer__link">
+                Newsletter
+              </Link>
+            </li>
+            <li>
               <Link href="/impressum/" className="site-footer__link">
                 Impressum
               </Link>

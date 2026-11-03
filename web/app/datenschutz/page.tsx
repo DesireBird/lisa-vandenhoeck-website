@@ -39,12 +39,13 @@ export default function DatenschutzPage() {
             <p>
               Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies
               zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen
-              erforderlich ist. Diese Website verwendet keine Formulare, über die personenbezogene
-              Daten erhoben werden, und keine Werbe- oder Social-Media-Tracker (z. B. Google
-              Analytics, Meta-Pixel o. Ä.). Cookies setzt nur das Statistik-Tool Matomo, und nur
-              wenn Sie dem zugestimmt haben (siehe Abschnitt 5). Ihre Entscheidung im
-              Einwilligungsbanner speichern wir im <code>localStorage</code> Ihres Browsers, damit
-              der Banner nicht bei jedem Aufruf erscheint.
+              erforderlich ist. Personenbezogene Daten erheben wir nur über das
+              Newsletter-Anmeldeformular (siehe Abschnitt 7). Diese Website verwendet keine Werbe-
+              oder Social-Media-Tracker (z. B. Google Analytics, Meta-Pixel o. Ä.). Cookies setzt
+              nur das Statistik-Tool Matomo, und nur wenn Sie dem zugestimmt haben (siehe Abschnitt
+              5). Ihre Entscheidung im Einwilligungsbanner speichern wir im{" "}
+              <code>localStorage</code> Ihres Browsers, damit der Banner nicht bei jedem Aufruf
+              erscheint.
             </p>
             <p>
               Die auf dieser Website verwendeten Schriftarten (Unbounded, Plus Jakarta Sans) sind
@@ -127,16 +128,16 @@ export default function DatenschutzPage() {
               Wenn Sie im Banner „Zustimmen“ wählen, nutzen wir die Open-Source-Software Matomo, um
               zu verstehen, wie diese Website genutzt wird. Matomo betreiben wir selbst unter{" "}
               <code>stats.vandenhoeck.de</code> auf einem Server unseres Hosters ALL-INKL.COM – Neue
-              Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland. Die Daten bleiben
-              auf diesem Server in Deutschland und werden nicht an Dritte weitergegeben. Mit
+              Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Deutschland. Die Daten bleiben auf
+              diesem Server in Deutschland und werden nicht an Dritte weitergegeben. Mit
               ALL-INKL.COM besteht ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO).
             </p>
             <p>Dabei werden folgende Daten verarbeitet:</p>
             <ul className="bullet-list">
               <li>aufgerufene Seiten, Verweildauer und Reihenfolge der Seitenaufrufe</li>
               <li>
-                Klicks in der Navigation, auf Links zu anderen Websites und auf Funktionen wie
-                „Copy Spec as MD“
+                Klicks in der Navigation, auf Links zu anderen Websites und auf Funktionen wie „Copy
+                Spec as MD“
               </li>
               <li>verweisende Website, Browser, Betriebssystem, Bildschirmgröße, Sprache</li>
               <li>Ihre IP-Adresse, die vor der Speicherung gekürzt wird (anonymisiert)</li>
@@ -180,8 +181,51 @@ export default function DatenschutzPage() {
                 calendly.com/privacy
               </a>
             </p>
+            <p id="newsletter">
+              <strong>7. Newsletter über Brevo (nur mit Ihrer Einwilligung)</strong>
+            </p>
             <p>
-              <strong>7. Ihre Rechte als betroffene Person</strong>
+              Wenn Sie sich für unseren Newsletter anmelden, verarbeiten wir Ihre E-Mail-Adresse
+              sowie Datum, Uhrzeit und IP-Adresse Ihrer Anmeldung und der Bestätigung. Die Anmeldung
+              erfolgt im Double-Opt-in-Verfahren: Sie erhalten zuerst eine Bestätigungsmail und
+              werden erst nach Klick auf den Link darin in den Verteiler aufgenommen. So stellen wir
+              sicher, dass nur Sie selbst Ihre Adresse eintragen können.
+            </p>
+            <p>
+              Beim Absenden des Formulars werden die Daten direkt von Ihrem Browser an unseren
+              Dienstleister Brevo übertragen (<code>sibforms.com</code>). Brevo erhält dabei auch
+              Ihre IP-Adresse. Anbieter ist die Brevo GmbH, Köpenicker Str. 126, 10179 Berlin,
+              Deutschland. Brevo verarbeitet die Daten in unserem Auftrag, wir haben dazu einen
+              Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO) geschlossen. Dabei kann eine
+              Übermittlung in Länder außerhalb der EU stattfinden; sie stützt sich auf einen
+              Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy Framework) oder auf
+              Standardvertragsklauseln (Art. 46 DSGVO).
+            </p>
+            <p>
+              Die Newsletter-Versendung wird statistisch ausgewertet: Brevo erfasst, ob und wann
+              eine E-Mail geöffnet und welche Links angeklickt werden. Wir nutzen das, um unsere
+              Inhalte zu verbessern.
+            </p>
+            <p>
+              Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 7 Abs. 2 Nr. 3
+              UWG). Wir speichern Ihre Daten, bis Sie sich abmelden. Sie können Ihre Einwilligung
+              jederzeit widerrufen, über den Abmeldelink in jeder Newsletter-Mail oder per E-Mail an
+              lisa@vandenhoeck.de. Danach löschen wir Ihre Adresse aus dem Verteiler. Nachweise zur
+              Anmeldung bewahren wir nur auf, soweit das zur Verteidigung gegen Ansprüche
+              erforderlich ist (Art. 6 Abs. 1 lit. f DSGVO).
+            </p>
+            <p>
+              Weitere Informationen zum Datenschutz bei Brevo:{" "}
+              <a
+                href="https://www.brevo.com/de/legal/privacypolicy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                brevo.com/de/legal/privacypolicy
+              </a>
+            </p>
+            <p>
+              <strong>8. Ihre Rechte als betroffene Person</strong>
             </p>
             <p>
               Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
@@ -208,7 +252,7 @@ export default function DatenschutzPage() {
               Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.
             </p>
             <p>
-              <strong>8. Aktualität und Änderung dieser Datenschutzerklärung</strong>
+              <strong>9. Aktualität und Änderung dieser Datenschutzerklärung</strong>
             </p>
             <p>
               Diese Datenschutzerklärung ist aktuell gültig (Stand: Oktober 2026). Durch die

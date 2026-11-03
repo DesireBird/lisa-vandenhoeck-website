@@ -25,6 +25,7 @@ Website von Lisa Vandenhoeck (Vandenhoeck Deepdives). Aufbau wie Paw Holidays (`
 - Schriften selbst hosten, keine externen CDNs
 - Indexiert wird nur mit `SITE_ENV=production`, sonst `noindex`
 - Impressum und Datenschutz bleiben im Code
+- Newsletter über Brevo (Double-Opt-in in Brevo): Seiten `/newsletter/`, `/newsletter/bestaetigen/`, `/newsletter/bestaetigt/`; Formular `web/components/NewsletterForm.tsx` sendet per Fetch an die öffentliche Brevo-Formular-URL in `web/lib/newsletter.ts`. Neue URL → `connect-src` in der CSP (`netlify.toml`) und Datenschutz Abschnitt 7 prüfen
 - Startseiten-Hero, Buchungslink (alle „Termin buchen“-Buttons) und Standard-SEO kommen aus dem Singleton `siteSettings` (Studio: „Seiteneinstellungen“); Ersatzwerte in `web/lib/settings.ts`
 - Alles wird beim Build aus Sanity geholt, keine Abfragen zur Laufzeit im Browser. Bilder kommen vom Sanity-CDN (`<SanityImg>`, schlichtes `<img>` mit srcset; kein `next/image`, dessen width/height die übernommenen CSS-Größen bricht)
 - Keine personenbezogenen Daten ins Sanity-Dataset (es ist öffentlich). Tokens nur als Netlify-Umgebungsvariablen, nie im Repo

@@ -195,11 +195,11 @@ export default function DatenschutzPage() {
               Beim Absenden des Formulars werden die Daten direkt von Ihrem Browser an unseren
               Dienstleister Brevo übertragen (<code>sibforms.com</code>). Brevo erhält dabei auch
               Ihre IP-Adresse. Anbieter ist die Brevo GmbH, Köpenicker Str. 126, 10179 Berlin,
-              Deutschland. Brevo verarbeitet die Daten in unserem Auftrag, wir haben dazu einen
-              Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO) geschlossen. Dabei kann eine
-              Übermittlung in Länder außerhalb der EU stattfinden; sie stützt sich auf einen
-              Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy Framework) oder auf
-              Standardvertragsklauseln (Art. 46 DSGVO).
+              Deutschland. Brevo verarbeitet die Daten in unserem Auftrag. Der Vertrag zur
+              Auftragsverarbeitung (Art. 28 DSGVO) ist Bestandteil der Nutzungsbedingungen von
+              Brevo. Dabei kann eine Übermittlung in Länder außerhalb der EU stattfinden; sie stützt
+              sich auf einen Angemessenheitsbeschluss der EU-Kommission (EU-U.S. Data Privacy
+              Framework) oder auf Standardvertragsklauseln (Art. 46 DSGVO).
             </p>
             <p>
               Die Newsletter-Versendung wird statistisch ausgewertet: Brevo erfasst, ob und wann

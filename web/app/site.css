@@ -194,42 +194,6 @@ img {
   background-color: var(--color-fill-neutral-subtle);
 }
 
-/* ── Ticker ───────────────────────────────────────────────── */
-.ticker {
-  overflow: hidden;
-  background-color: var(--color-neutral-dark-900);
-  padding: 10px 0;
-}
-
-.ticker__track {
-  display: flex;
-  align-items: center;
-  gap: var(--space-layout-s);
-  width: max-content;
-  animation: ticker-scroll 26s linear infinite;
-}
-
-.ticker__item {
-  font: var(--text-style-caption-meta);
-  color: var(--color-neutral-light-400);
-  white-space: nowrap;
-}
-
-.ticker__sep {
-  color: var(--color-fill-accent1-solid);
-  font-weight: var(--weight-bold);
-  flex-shrink: 0;
-}
-
-@keyframes ticker-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
   background-color: var(--color-surface-default);

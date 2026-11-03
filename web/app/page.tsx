@@ -15,34 +15,6 @@ export default async function HomePage() {
   const settings = await getSettings();
   return (
     <>
-      {/* ── Ticker ─────────────────────────────────────────────── */}
-      <div className="ticker" aria-hidden="true">
-        <div className="ticker__track">
-          <span className="ticker__item">Design System</span> <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">AI-Progress</span> <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Neue Arbeitsweisen</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">Neue Tools</span>{" "}
-          <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Figma Releases</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">Variables</span>{" "}
-          <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Component Libraries</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">BFSG</span>{" "}
-          <span className="ticker__sep">·</span>
-          {/* Duplicate for seamless loop */}
-          <span className="ticker__item">Design System</span> <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">AI-Progress</span> <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Neue Arbeitsweisen</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">Neue Tools</span>{" "}
-          <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Figma Releases</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">Variables</span>{" "}
-          <span className="ticker__sep">·</span>{" "}
-          <span className="ticker__item">Component Libraries</span>{" "}
-          <span className="ticker__sep">·</span> <span className="ticker__item">BFSG</span>{" "}
-          <span className="ticker__sep">·</span>
-        </div>
-      </div>
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="hero" id="hero">
         <div className="container hero__inner">

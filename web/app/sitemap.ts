@@ -2,12 +2,19 @@ import type { MetadataRoute } from "next";
 import { foundationCategories, getDsComponents } from "@/lib/designSystem";
 import { dsBase } from "@/lib/dsContent";
 import { getAllResources, getDsPatterns, getFlatSlugs } from "@/lib/queries";
+import { newsletterAction } from "@/lib/newsletter";
 import { siteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
 // Platzhalterseite services erst aufnehmen, wenn sie Inhalt hat.
-const staticPaths = ["/", "/about/", "/impressum/", "/datenschutz/"];
+const staticPaths = [
+  "/",
+  "/about/",
+  "/impressum/",
+  "/datenschutz/",
+  ...(newsletterAction ? ["/newsletter/"] : []),
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [slugs, resources, patterns] = await Promise.all([

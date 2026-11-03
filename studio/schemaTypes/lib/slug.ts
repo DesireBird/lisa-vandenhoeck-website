@@ -37,6 +37,7 @@ export const reservedSlugs = [
   'ressourcen',
   'impressum',
   'datenschutz',
+  'newsletter',
   'studio',
   'api',
 ]

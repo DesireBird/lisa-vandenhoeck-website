@@ -202,9 +202,11 @@ export default function DatenschutzPage() {
               Framework) oder auf Standardvertragsklauseln (Art. 46 DSGVO).
             </p>
             <p>
-              Die Newsletter-Versendung wird statistisch ausgewertet: Brevo erfasst, ob und wann
-              eine E-Mail geöffnet und welche Links angeklickt werden. Wir nutzen das, um unsere
-              Inhalte zu verbessern.
+              Die Newsletter-Versendung wird statistisch ausgewertet: Brevo zählt, wie oft eine
+              E-Mail geöffnet und wie oft Links angeklickt werden. Dafür nutzen wir die Funktion
+              „Anonymes E-Mail-Tracking“. Öffnungen und Klicks werden dabei nicht einzelnen Personen
+              zugeordnet, Angaben wie E-Mail- und IP-Adresse werden anonymisiert. Wir sehen nur die
+              Gesamtwerte und nutzen sie, um unsere Inhalte zu verbessern.
             </p>
             <p>
               Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 7 Abs. 2 Nr. 3

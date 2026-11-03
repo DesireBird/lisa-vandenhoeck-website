@@ -886,6 +886,53 @@ img {
   box-shadow: var(--elevation-l);
 }
 
+/* ── Newsletter ───────────────────────────────────────────── */
+.newsletter__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-layout-m);
+  align-items: center;
+}
+
+.newsletter__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 40% 45%;
+  border-radius: var(--radius-surface-m);
+  box-shadow: var(--elevation-l);
+}
+
+.newsletter__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-s);
+  min-width: 0;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-gap-xl);
+}
+
+.newsletter__form .checkbox__label {
+  line-height: 1.5;
+}
+
+.newsletter__form .checkbox__label a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .newsletter__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Fließtext-Section: schmalere Lesebreite, mittig platziert,
    Text selbst bleibt linksbündig (kein text-align: center). */
 .narrative {
